@@ -15,7 +15,7 @@ catalog:
   status: Operational
   vendor: Hologiv
   vendor_url: http://hologic.com
-  version: 0.0.1
+  version: 1.0.0
 
     parameters:
     - id: catalog_key
