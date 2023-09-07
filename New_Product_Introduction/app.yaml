@@ -3,9 +3,12 @@ title: Hologic New Product Introduction Workflow
 type: project
 version: 1.0.0
 icon: app.png
+introduction:
+  format: markdown
+  template: Hologic New Product Introduction Workflow for 800-53 (low)
 
 catalog:
-  category: Process Apps
+  category: Processes Apps
   title: Hologic New Product Introduction Workflow
   description:
     long: |
@@ -13,17 +16,17 @@ catalog:
       product information, team information, deployment, platform, and hosting information.
     short: Walks a user through the creation of a new product.
   source_url: http://hologic.com
-  status: Operational
+  status: production
   vendor: Hologic
   vendor_url: http://hologic.com
+  parameters:
+  - id: catalog_key
+    value: NIST_SP-800-53_rev4
+  - id: baseline
+    value: low
+  version: 1.0.0
 
-parameters:
-- id: catalog_key
-  value: NIST_SP-800-53_rev5
-- id: dbaseline
-  value: low
-
-  questions:
+questions:
 - id: system_basics
   title: Document official system name and type
   type: module
@@ -49,13 +52,13 @@ output:
   format: markdown
   template: |
     <div style="text-align:center;">
-
+  
     ## Create a profile for your system
-
+  
     ![](app.png)
-
+  
     ### No sweat! We'll capture the details quickly.
-
+  
     </div>
 - id: system_name
   format: markdown
