@@ -1,0 +1,201 @@
+id: system_name_and_details
+title: System Name and Details
+introduction:
+  format: markdown
+  template: Let's document the name of your product and some basic product information.
+questions:
+- id: rd_team
+  title: Product R&D Team
+  prompt: What R&D Team will this product belong to?
+  type: choice
+  choices:
+  - key: breast
+    text: Breast
+    help: Breast Imaging
+  - key: unifi
+    text: Unifi
+    help: Unifi Connect
+  - key: ulrasound
+    text: Ultrasound
+    help: Breast Ultrasound
+  - key: skeletal
+    text: Skeletal
+    help: Skeletal Health
+  - key: molecular
+    text: Molecular
+    help: Molecular Health
+  - key: diagnostics
+    text: Diagnostics
+    help: Diagnostic Health
+  - key: surgical
+    text: Surgical
+    help: Surgical Team
+  - key: BTX
+    text: BTX
+    help: BTX Team
+  - key: service
+    text: Service
+    help: Service Teams
+- id: version
+  title: Product Version.
+  prompt: What is the version number of this product?
+  type: real
+- id: system_name
+  title: System name
+  prompt: What is the preferred official name of the product you are developing?
+  type: text
+- id: system_nickname_exists
+  title: System abbreviation exists
+  prompt: |-
+    Does {{system_name}} have a nickname or project name, acronym, or is called by other names??
+
+    Organizations often use a nickname or acronym to refer to an information system.
+  type: yesno
+- id: system_nickname
+  title: System abbreviation
+  prompt: |
+    What is the preferred nickname or acronym for {{system_name}}?
+  type: text
+  impute:
+  - condition: system_nickname_exists == 'no'
+    value: ~
+- id: system_name_done_interstitial
+  title: Product name complete
+  prompt: |-
+    Thanks! You've now documented the product name.
+
+    - Official Name: **{{system_name}}**
+    - Nickname: **{{system_nickname}}**
+
+    Now let's document the type of product you want to develop.
+  type: interstitial
+- id: what_kind_of_system
+  title: Product type
+  prompt: What kind of information technology system is this?
+  type: choice
+  choices:
+  - key: application
+    text: Application
+    help: Any type of stand-alone software application.
+  - key: device
+    text: Device
+    help: Any type of device that contains software and hardware.
+  - key: cloud
+    text: Cloud
+    help: Any SAAS that is hosted in the cloud (Public or Private).
+  - key: service
+    text: General Service
+    help: Any type of network or infrastructure component (e.g., storage system).
+- id: what_kind_of_application
+  title: Application type
+  prompt: What kind of application is it?
+  type: choice
+  choices:
+  - key: desktop
+    text: Desktop Software
+  - key: mobile
+    text: Mobile Application
+  - key: web
+    text: Web Site
+  - key: server
+    text: Server Software
+  impute:
+  - condition: what_kind_of_system != 'application'
+    value: ~
+- id: desktop_operating_system
+  title: Desktop Applicaton Operating System
+  prompt: Which operating systems will the desktop application run on?
+  type: multiple-choice
+  choices:
+  - key: mswindows
+    text: Microsoft Windows
+    help: Includes Microsoft Surface and other Microsoft mobile devices.
+  - key: linux
+    text: Linux
+  - key: macos
+    text: Apple macOS / Macintosh OS X
+  - key: unix
+    text: Unix
+  min: 0
+  impute:
+  - condition: what_kind_of_application != 'desktop'
+    value: ~
+  max: ~
+- id: mobile_operating_system
+  title: Mobile Applicaton Operating System
+  prompt: Which operating systems will the mobile application run on?
+  type: multiple-choice
+  choices:
+  - key: ios
+    text: iOS
+    help: iPhone, iPad.
+  - key: android
+    text: Android
+    help: Android-based phones and devices.
+  - key: windows-mobile
+    text: Windows mobile
+    help: Windows based mobile devices other than Surface.
+  - key: other
+    text: Other
+  impute:
+  - condition: what_kind_of_application != 'mobile'
+    value: ~
+  min: 0
+  max: ~
+- id: launch_date
+  title: Launch date
+  prompt: |
+    When do you expect to launch {{system_name}} to users, or when was it launched?
+
+    If the system was already launched, enter the date the system went live.
+  type: date
+- id: champions
+  title: Who are the Cybersecurity Champions for this product?
+  prompt: >-
+    The Product Cybersecurity Champions will be responsible for creating and maintaining
+    the cybersecurity
+
+    artifacts necessary for the successful implementation of the Secure Product Development
+    Framework for
+
+    {{system_name}}. They will work closely with other members of the development
+    team to ensure that
+
+    cybersecurity considerations are integrated into every aspect of product design
+    and development.
+  type: datagrid
+  min: 1
+  fields:
+  - key: Name
+    text: Champion Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  max: ~
+- id: product_manager
+  title: Identify the Product Manager.
+  prompt: Who is the product manager for this product?
+  type: datagrid
+  fields:
+  - key: Name
+    text: Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  min: 0
+  max: ~
+- id: dev_manager
+  title: Identify the Development Manager
+  prompt: Who is the development manager for this product?
+  type: datagrid
+  fields:
+  - key: Name
+    text: Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  min: 0
+  max: ~
