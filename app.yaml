@@ -1,0 +1,70 @@
+id: app
+title: Hologic New Product Introduction Workflow
+type: project
+version: 1.0.0
+icon: app.png
+
+catalog:
+  title: Hologic New Product Introduction Workflow
+  category: Process Apps
+  description:
+    long: |
+      This application will walk a user through the creation of a new product. It will collect
+      product information, team information, deployment, platform, and hosting information.
+    short: Walks a user through the creation of a new product.
+  source_url: http://hologic.com
+  status: Operational
+  vendor: Hologic
+  vendor_url: http://hologic.com
+
+
+    parameters:
+    - id: catalog_key
+      value: NIST_SP-800-53_rev5
+    - id: dbaseline
+      value: low
+
+  questions:
+- id: system_basics
+  title: Document official system name and type
+  type: module
+  module-id: system_name_and_details
+  tab: System Profile
+  group: System Description
+- id: system_basics_technical
+  title: Document basic technical details
+  type: module
+  module-id: system_basics_technical
+  tab: System Profile
+  group: System Description
+- id: system_description
+  title: Prepare re-usable system descriptions
+  type: module
+  module-id: system_description
+  tab: System Profile
+  group: System Description
+
+output:
+- id: system_profile
+  tab: System Profile
+  format: markdown
+  template: |
+    <div style="text-align:center;">
+
+    ## Create a profile for your system
+
+    ![](app.png)
+
+    ### No sweat! We'll capture the details quickly.
+
+    </div>
+- id: system_name
+  format: markdown
+  template: |
+    {{project.system_basics.system_name}}
+- id: system_nickname
+  format: markdown
+  template: |
+    {{project.system_basics.system_nickname}}
+
+
