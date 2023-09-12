@@ -1,7 +1,7 @@
 id: app
-title: New Product Workflow Copy
+title: Create a new Hologic Product
 type: project
-version: 0.1.2
+version: 0.1.3
 icon: app.png
 protocol:
 - hologic.npi
@@ -29,7 +29,7 @@ catalog:
     value: NIST_SP-800-53_rev4
   - id: baseline
     value: low
-  version: 0.1.2
+  version: 0.1.3
 questions:
 - id: prod_metadata
   title: Module 1 - Information about the Product and the Product Team
