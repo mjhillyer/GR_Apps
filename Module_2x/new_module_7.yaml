@@ -1,0 +1,8 @@
+id: new_module_7
+title: New Module 7
+output: []
+questions:
+- id: tm
+  title: Upload your threat model file.
+  prompt: Upload the TM7 file from Microsoft Threat Modeling Tool
+  type: file

@@ -1,0 +1,59 @@
+id: app
+title: Hologic New Product Introduction Workflow Copy
+type: project
+version: 2.0.0
+icon: app.png
+introduction:
+  format: markdown
+  template: Hologic New Product Introduction Workflow
+
+catalog:
+  category: Hologic
+  description:
+    long: |
+      This application will walk a user through the creation of a new product. It will collect
+      product information, team information, deployment, platform, and hosting information.
+    short: Walks a user through the creation of a new product.
+  source_url: http://hologic.com
+  status: production
+  vendor: Hologic
+  vendor_url: http://hologic.com
+  version: 2.0.0
+  parameters:
+  - id: catalog_key
+    value: NIST_SP-800-53_rev4
+  - id: baseline
+    value: low
+
+questions:
+- id: system_basics
+  title: Document official system name and type
+  type: module
+  module-id: system_name_and_details
+  tab: System Profile
+  group: System Description
+- id: system_basics_technical
+  title: Document basic technical details
+  type: module
+  module-id: system_basics_technical
+  tab: System Profile
+  group: System Description
+- id: system_description
+  title: Prepare re-usable system descriptions
+  type: module
+  module-id: system_description
+  tab: System Profile
+  group: System Description
+- id: evaluate
+  title: Evaluate Control Mitigations
+  type: module
+  module-id: new_module_6
+  group: System Description
+  output: []
+- id: threat_model
+  title: Threat Model
+  type: module
+  module-id: new_module_7
+  group: System Description
+
+output: []
