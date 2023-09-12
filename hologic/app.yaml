@@ -1,28 +1,35 @@
 id: app
-title: New Compliance App
+title: Hologic NPI Workflow
 type: project
-version: 0.1.0
+version: 0.1.1
 icon: app.png
+protocol:
+- hologic.npi
 introduction:
   format: markdown
   template: |
-    Use this app to achieve compliance.
+    Workflow to create a new product record.
+
 input: []
 output: []
 catalog:
   title: Create New Product
   category: Hologic
-  vendor: GovReady
-  vendor_url: ~
+  vendor: Hologic
+  vendor_url: http://hologic.com
   status: stub
-  source_url: ~
+  source_url: https://github.com/mjhillyer/GR_Apps
   description:
     short: Create a new product record.
     long: >
-      Edit this Markdown file to provide a long description of your compliance app.
-      The contents of this file will be displayed in the GovReady-Q Compliance Apps
-      Catalog.
-  version: 0.1.0
+      This is a workflow to create a new product entry into the prouct security manangement system.
+  version: 0.1.1
+  parameters:
+  - id: catalog_key
+    value: NIST_SP-800-53_rev4
+  - id: baseline
+    value: low
+
 questions:
 - id: module_1
   title: Module 1
