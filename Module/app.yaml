@@ -1,0 +1,46 @@
+id: app
+title: Hologic Module 2
+type: project
+icon: app.png # refers to file in app's assets directory
+protocol: # for inner apps only
+- hologic_npi_two
+
+catalog:
+  categories:
+    - Hologic
+    - Processes
+  vendor: Hologic
+  vendor_url: https://hologic.com
+  status: Operational
+  version: 2.0.0
+  version-name: Initial Release
+  source_url: https://github.com/mjhillyer/GR_Apps
+  description:
+    short: |
+      Walks a user through the creation of a new product.
+    long: |
+      This application will walk a user through the creation of a new product. It will collect
+      product information, team information, deployment, platform, and hosting information.
+  recommended_for:
+    - key_short: Org
+      value: Medium
+    - key_short: Tech
+      value: Drupal
+    - key_short: Role
+      value: Dev
+
+questions:
+
+#ato letter
+- id: ato_letter
+  module-id: ato_letter
+  icon: certification.png
+  title: ATO Letter
+  type: module
+  group: ATO Letter
+
+output:
+  - tab: TabName
+    format: markdown
+    template: |
+      This (optional) content will appear at the top of the TabName tab.
