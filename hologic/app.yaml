@@ -13,7 +13,7 @@ introduction:
 input: []
 output: []
 catalog:
-  title: Create New Product
+  title: New Product Workflow
   category: Hologic
   vendor: Hologic
   vendor_url: http://hologic.com
