@@ -1,7 +1,7 @@
 id: app
 title: Hologic New Product Introduction Workflow
 type: project
-version: 1.0.3
+version: 1.0.4
 icon: app.png
 introduction:
   format: markdown
@@ -23,8 +23,8 @@ catalog:
   - id: catalog_key
     value: NIST_SP-800-53_rev4
   - id: baseline
-    value: moderate
-  version: 1.0.3
+    value: low
+  version: 1.0.4
 
 questions:
 - id: system_basics
@@ -44,6 +44,13 @@ questions:
   type: module
   module-id: system_description
   tab: System Profile
+  group: System Description
+   module-id: new_module_6
+  group: System Description
+- id: threat_model
+  title: Threat Model
+  type: module
+  module-id: new_module_7
   group: System Description
 
 
