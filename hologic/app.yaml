@@ -1,7 +1,7 @@
 id: app
 title: Create a new Hologic Product Copy
 type: project
-version: 0.1.5
+version: 0.1.6
 icon: app.png
 protocol:
 - hologic.npi
@@ -24,7 +24,7 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-  version: 0.1.5
+  version: 0.1.6
 questions:
 - id: prod_metadata
   title: Module 1 - Information about the Product and the Product Team
