@@ -6,16 +6,43 @@ output:
   title: What You Chose
   template: '{{q1}}'
 questions:
-- id: q1
-  title: What is your favorite science fiction franchise?
-  prompt: What is your favorite science fiction franchise?
+- id: platform
+  title: Product hosted platform.
+  prompt: What is the platform type that the product will use?
   type: choice
   choices:
-  - key: startrek
-    text: Star Trek
-  - key: starwars
-    text: Star Wars
-  - key: lordoftherings
-    text: Lord of the Rings
+  - key: application
+    text: Application
+    help: Any type of stand-alone software application for servers or workstations.
+  - key: device
+    text: IOT Device
+    help: Any type of device that contains software and hardware.
+  - key: mobile
+    text: Mobile Application
+    help: Software designed for mobile devices.
+  - key: api
+    text: API Service
+    help: Service run as API
+  - key: cloud
+    text: Cloud
+    help: Application hosted as a SAAS (internal or external).
   - key: other
     text: Other
+    help: Does not match any other platform technology.
+- id: operating_system
+  title: Application Operating System
+  prompt: '*CON* What operating systems will this product include?'
+  type: multiple-choice
+  choices:
+  - key: win
+    text: Microsoft Windows
+  - key: linux
+    text: Linux or Unix
+  - key: macos
+    text: Apple Macintosh OS X
+  - key: ios
+    text: Apple iOS
+  - key: android
+    text: Android
+  min: 0
+  max: ~

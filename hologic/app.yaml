@@ -1,5 +1,5 @@
 id: app
-title: Hologic NPI Workflow
+title: New Product Workflow Copy
 type: project
 version: 0.1.2
 icon: app.png
@@ -9,11 +9,9 @@ introduction:
   format: markdown
   template: |
     Workflow to create a new product record.
-
 input: []
 output: []
 catalog:
-  title: New Product Workflow
   category: Hologic
   vendor: Hologic
   vendor_url: http://hologic.com
@@ -21,53 +19,55 @@ catalog:
   source_url: https://github.com/mjhillyer/GR_Apps
   description:
     short: Create a new product record.
-    long: >
-      This is a workflow to create a new product entry into the prouct security manangement system.
-  version: 0.1.2
+    long: |
+      New Compliance App
+      ==================
+
+      Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
   parameters:
   - id: catalog_key
     value: NIST_SP-800-53_rev4
   - id: baseline
     value: low
-
+  version: 0.1.2
 questions:
-- id: module_1
-  title: Module 1
+- id: prod_metadata
+  title: Module 1 - Information about the Product and the Product Team
   type: module
   module-id: module_1
-- id: module_2
-  title: Module 2
+- id: init_assessment
+  title: Module 2 - Product Operational and Environmental Assessment
   type: module
   module-id: module_2
-- id: module_3
-  title: Module 3
+- id: design
+  title: Module 3 - Product Design Assessment
   type: module
   module-id: module_3
-- id: module_4
-  title: Module 4
+- id: min_requirements
+  title: Module 4 - Minimum Security Requirements Assessment
   type: module
   module-id: module_4
-- id: module_5
-  title: Module 5
+- id: prod_controls
+  title: Module 5 - Product Security Controls
   type: module
   module-id: module_5
-- id: module_6
-  title: Module 6
+- id: pia
+  title: Module 6 - Privacy Assessment & Data Dictionary
   type: module
   module-id: module_6
-- id: module_7
-  title: Module 7
+- id: des_rvw
+  title: 'Module 7 - Product Concept: Technical Design Review'
   type: module
   module-id: module_7
-- id: module_8
-  title: Module 8
+- id: prod_doc
+  title: Module 8 - Product Security Documentation
   type: module
   module-id: module_8
-- id: module_9
-  title: Module 9
+- id: third_party
+  title: Module 9 - 3rd Party Commercial Components Assessment
   type: module
   module-id: module_9
-- id: module_10
-  title: Module 10
+- id: sas
+  title: Module 10 - Product Security Risk Assessment Summary
   type: module
   module-id: module_10
