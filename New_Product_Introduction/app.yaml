@@ -25,7 +25,7 @@ catalog:
   - id: baseline
     value: low
   version: 1.0.6
-
+  
 questions:
 - id: system_basics
   title: Document official system name and type
@@ -50,18 +50,15 @@ questions:
   type: module
   module-id: new_module_6
   group: System Description
+  output: []
 - id: threat_model
   title: Threat Model
   type: module
   module-id: new_module_7
   group: System Description
+  output: []
 - id: cmp
-  title: Product Cybersecurity Plan
+  title: Product Cybersecurity Management Plan
   type: module
   module-id: cmp
-  tab: System Ptofile
   group: System Description
-
-
-
-
