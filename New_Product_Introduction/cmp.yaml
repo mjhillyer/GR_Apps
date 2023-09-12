@@ -1,10 +1,10 @@
-id: ssp_intro
-title: System Security Plan
+id: cmp
+title: Product Cybersecurity Management
 output:
-- id: ssp_v1
+- id: cmp
   format: markdown
-  title: SSP v1
-  filename: templates/ssp_v1.md
+  title: CMP
+  filename: templates/cmp.md
   template: |2
 
     <style type="text/css" scoped>
