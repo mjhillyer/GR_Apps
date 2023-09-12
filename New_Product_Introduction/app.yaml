@@ -45,13 +45,20 @@ questions:
   module-id: system_description
   tab: System Profile
   group: System Description
-   module-id: new_module_6
+  module-id: new_module_6
   group: System Description
 - id: threat_model
   title: Threat Model
   type: module
   module-id: new_module_7
   group: System Description
+- id: cmp
+  title: Product Cybersecurity Plan
+  type: module
+  module-id: cmp
+  tab: System Ptofile
+  group: System Description
+
 
 
 
