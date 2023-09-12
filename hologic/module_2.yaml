@@ -6,6 +6,36 @@ output:
   title: What You Chose
   template: '{{q1}}'
 questions:
+- id: base_risk
+  title: Baseline Risk Level
+  prompt: What is {{prod.metadata.prod_name}}'s tentative Risk level?
+  type: choice
+  choices:
+  - key: Low
+    text: Low
+    help: Low impact indicates that the loss of confidentiality, integrity, or availability
+      is expected to have a limited adverse effect on organizational operations, organizational
+      assets, or individuals.
+  - key: Moderate
+    text: Moderate
+    help: Moderate impact indicates that the loss of confidentiality, integrity, or
+      availability is expected to have a serious adverse effect on organizational
+      operations, organizational assets, or individuals.
+  - key: High
+    text: High
+    help: High impact indicates the loss of confidentiality, integrity, or availability
+      is expected to have a severe or catastrophic adverse effect on organizational
+      operations, organizational assets, or individuals.
+  actions:
+  - action: system/assign_baseline/NIST_SP-800-53_rev4=+=low
+    comment: Assign 800-53 Rev 4 Low baseline set of controls to a system
+    value: Low
+  - action: system/assign_baseline/NIST_SP-800-53_rev4=+=moderate
+    comment: Assign 800-53 Rev 4 Moderate baseline set of controls to a system
+    value: Moderate
+  - action: system/assign_baseline/NIST_SP-800-53_rev4=+=high
+    comment: Assign 800-53 Rev 4 High baseline set of controls to a system
+    value: High
 - id: platform
   title: Product hosted platform.
   prompt: What is the platform type that the product will use?
