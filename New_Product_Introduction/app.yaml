@@ -24,7 +24,7 @@ catalog:
     value: NIST_SP-800-53_rev4
   - id: baseline
     value: moderate
-  version: 1.0.2
+  version: 1.0.3
 
 questions:
 - id: system_basics
