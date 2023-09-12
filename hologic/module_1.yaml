@@ -1,10 +1,14 @@
 id: module_1
 title: Module 1
 output:
-- id: artifact_1
+- id: mod1out
+  title: Module 1 Output
   format: markdown
-  title: What You Chose
-  template: '{{q1}}'
+  filename: mod1
+  template: "R&D Team: {{rd_team}}\r\n\r\nProduct Name: {{prod_name}}\r\n\r\nProduct
+    Description: {{prod_desc}}\r\n\r\nLaunch Date: {{launch_date}}\r\n\r\nProduct
+    Team\r\n--------------------------------------------\r\nProduct Manager(s): \r\n{{prod_manager}}\r\n\r\nCybersecurity
+    Champion(s):\r\n{{champions}}\r\n\r\nR&D Engineering Manager:\r\n{{eng_dir}}"
 questions:
 - id: rd_team
   title: Product R&D Division
