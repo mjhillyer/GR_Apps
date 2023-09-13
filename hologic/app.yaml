@@ -1,14 +1,26 @@
 id: app
 title: Create a new Hologic Product Copy
 type: project
-version: 0.1.6
+version: 0.1.7
 icon: app.png
 protocol:
 - hologic.npi
 introduction:
   format: markdown
   template: |
-    Workflow to create a new product record.
+    The Secure Product Design Program provides a comprehensive process that spans the lifecycle of a product 
+    and will facilitate secure by design activities, fulfill cybersecurity risk management requirements, data
+    privacy impact assessments, and the implementation of privacy protecting controls. The Secure Product 
+    Design Program is a systematic approach to introduce privacy and security considerations into all design
+    engineering activities covering the entire product lifecycle from initial design to end of life activities.
+    The Secure Product Design Program is a set of policies, guidelines and frameworks that govern how cyber 
+    risk is identified, mitigated, and tracked during the entire product lifecycle.
+
+    The goal of The Hologic Secure Product Design Program is to provide a Secure by Design methodology to the 
+    product engineering activities that span the entire product lifecycle from initial concept to product 
+    obsolescence. This allows the product development team to 'shift left' their security activities, 
+    allowing the inclusion of security features earlier in the development process. By shifting left, 
+    the cost to mitigate any security risk is significantly reduced. 
 input: []
 output: []
 catalog:
@@ -24,7 +36,7 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-  version: 0.1.6
+  version: 0.1.7
 questions:
 - id: prod_metadata
   title: Module 1 - Information about the Product and the Product Team
@@ -66,3 +78,7 @@ questions:
   title: Module 10 - Product Security Risk Assessment Summary
   type: module
   module-id: module_10
+- id: test
+  title: Module 11 - test module
+  type: module
+  module-id: module_11
