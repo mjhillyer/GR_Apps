@@ -46,8 +46,8 @@ questions:
   title: Module 2 - Product Operational and Environmental Assessment
   type: module
   module-id: module_2
-- id: design
-  title: Module 3 - Product Design Assessment
+- id: post_market
+  title: Module 3 - Post Market Support Plan
   type: module
   module-id: module_3
 - id: min_requirements
@@ -78,7 +78,3 @@ questions:
   title: Module 10 - Product Security Risk Assessment Summary
   type: module
   module-id: module_10
-- id: test
-  title: Module 11 - test module
-  type: module
-  module-id: module_11
