@@ -56,7 +56,7 @@ questions:
   type: yesno
 - id: q8
   title: MDS2
-  prompt: Does the device allow personally identifiable information records be stored in a separate location from the device’s operating system (i.e. secondary internal drive, alternate drive partition, or remote storage location)? 
+  prompt: Does the device allow personally identifiable information records be stored in a separate location from the device's operating system (i.e. secondary internal drive, alternate drive partition, or remote storage location)? 
   type: yesno
 - id: q9
   title: MDS2
