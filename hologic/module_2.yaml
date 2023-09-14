@@ -76,3 +76,20 @@ questions:
     text: Android
   min: 0
   max: ~
+- id: lifespan
+  title: Operating System Lifespan
+  prompt: >-
+    Provide an estimate of the anticipated lifespan of the product. This includes
+    the expected duration for which the product will be actively supported and 
+    maintained after its initial release. Consider factors such as market demand, 
+    technological advancements, and regulatory requirements.
+  type: text
+- id: intended_use
+  title: Intended Use
+  prompt: Describe the Intended use of device in network-connected environment
+  type: longtext
+- id: data_flow
+  title: Data Flow Diagram
+  prompt: Please provide a network or data flow diagram that indicates connections
+    to other system components or expected external resources.
+  type: file
