@@ -42,7 +42,7 @@ questions:
   title: MDS2
   prompt: Does the device allow configuration to automatically delete local personally identifiable information after it is stored to a long term solution?
   type: yesno
-  - id: qxx
+- id: q87
   title: MDS2
   prompt: Does the device import/export personally identifiable information with other systems (e.g., a wearable monitoring device might export personally identifiable information to a server)?  
   type: yesno
