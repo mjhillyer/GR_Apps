@@ -46,7 +46,7 @@ questions:
   title: MDS2
   prompt: Does the device import/export personally identifiable information with other systems (e.g., a wearable monitoring device might export personally identifiable information to a server)?  
   type: yesno
- -id: q6
+-id: q6
   title: MDS2
   prompt: Does the device maintain personally identifiable information when powered off, or during power service interruptions? 
   type: yesno
