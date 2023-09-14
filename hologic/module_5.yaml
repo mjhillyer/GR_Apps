@@ -7,70 +7,15 @@ output:
   template: '{{q1}}'
 questions:
 - id: q1
-  title: Adding a component.
-  prompt: This will add a component. Check the controls count after completing this
-    module.
+  title: What is your favorite science fiction franchise?
+  prompt: What is your favorite science fiction franchise?
   type: choice
   choices:
-  - key: cybrary
-    text: Cybrary
+  - key: startrek
+    text: Star Trek
   - key: starwars
     text: Star Wars
   - key: lordoftherings
     text: Lord of the Rings
   - key: other
     text: Other
-  actions:
-  - action: element/add_role/Cybrary
-    comment: Add elements assigned Cybrary to selected components
-    value: cybrary
-- id: c01
-  title: Remote Service
-  prompt: Will the product be capable of Remote Service?
-  type: yesno
-- id: c02
-  title: Cloud Hosted
-  prompt: Is the product a cloud hosted software or service?
-  type: yesno
-- id: c03
-  title: Mobile
-  prompt: Is the device mobile and could easily be stolen?
-  type: yesno
-- id: c04
-  title: PII / PHI
-  prompt: Will this product  display, transmit, store, or modify personally identifiable
-    information?
-  type: yesno
-- id: c05
-  title: Medical Urgency
-  prompt: Does the product need to facilitate medical urgency needs and therefore is required to have a low barrier to user access?
-  type: yesno
-- id: c06
-  title: Number of records
-  prompt: Does the product store more than 500 patient records?
-  type: yesno
-- id: c07
-  title: High Availibility
-  prompt: Does the product require high availability (99.9+ uptime)?
-  type: yesno
-- id: c08
-  title: Official Record
-  prompt: Does the product store an official medical record? (EMR, PACS, etc...)
-  type: yesno
-- id: c09
-  title: Wireless
-  prompt: Will the product have wireless capabilities (Wi-Fi, Bluetooth, 5G)?
-  type: yesno
-- id: c10
-  title: DOD Customer
-  prompt: Will the product be sold to the US Department of Defence (DOD) or Veterans
-    Affairs (VA)?
-  type: yesno
-- id: c11
-  title: Multiple Site
-  prompt: Will the product be multi-site use (Trailer based MR, etc)?
-  type: yesno
-- id: c12
-  title: Removable Media
-  prompt: Will the product contain removable media? (CD-Rom, USB, etc)
-  type: yesno

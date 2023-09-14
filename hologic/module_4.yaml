@@ -37,7 +37,7 @@ questions:
   title: Malicious Software Protections
   prompt: Does the product include protection from malicious software (e.g., anti-virus,
     application whitelisting)?
-  type: yesno
+  type: text
 - id: mrq8
   title: Audit Logging
   prompt: Does the product provide audit logging capability for both clinical/application

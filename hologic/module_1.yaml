@@ -41,7 +41,7 @@ questions:
   type: longtext
 - id: prod_manager
   title: Product Manager
-  prompt: Who is the product manager for {{prod_name}}?
+  prompt: Who is the product manager for {{prod_name}}
   type: datagrid
   min: 0
   fields:
@@ -54,7 +54,7 @@ questions:
   max: ~
 - id: champions
   title: Product Cybersecurity Champions
-  prompt: Who are the cybersecurity champions for {{prod_name}}?
+  prompt: Who are the cybersecurity champions for {{prod_name}}
   type: datagrid
   min: 0
   fields:
