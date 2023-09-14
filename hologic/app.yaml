@@ -1,5 +1,5 @@
 id: app
-title: New Hologic Product
+title: Working Copy
 type: project
 version: 0.1.13
 instance-name: New Hologic Product Workflow
@@ -8,8 +8,12 @@ protocol:
 - hologic.npi
 introduction:
   format: markdown
-  template: |
-    The goal of The Hologic Secure Product Design Program is to provide a Secure by Design methodology to the product engineering activities that span the entire product lifecycle from initial concept to product obsolescence. This allows the product development team to 'shift left' their security activities, allowing the inclusion of security features earlier in the development process. By shifting left, the cost to mitigate any security risk is significantly reduced.   
+  template: "The goal of The Hologic Secure Product Design Program is to provide a
+    Secure by Design methodology to the product engineering activities that span the
+    entire product lifecycle from initial concept to product obsolescence. This allows
+    the product development team to 'shift left' their security activities, allowing
+    the inclusion of security features earlier in the development process. By shifting
+    left, the cost to mitigate any security risk is significantly reduced.   \n"
 input: []
 output: []
 catalog:
@@ -21,10 +25,10 @@ catalog:
   description:
     short: Create a new product record.
     long: |
-      Hologic Secure Product Design Program Workflow
+      New Compliance App
       ==================
 
-       The Secure Product Design Program is a systematic approach to introduce privacy and security considerations into all design engineering activities covering the entire product lifecycle from initial design to end of life activities.
+      Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
   version: 0.1.13
 questions:
 - id: prod_metadata
