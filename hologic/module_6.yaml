@@ -10,16 +10,4 @@ questions:
   title: Maintain PII/PHI
   prompt: Does the product maintain personally identifiable information?
   type: yesno
-  choices:
-  - key: startrek
-    text: Star Trek
-  - key: starwars
-    text: Star Wars
-  - key: lordoftherings
-    text: Lord of the Rings
-  - key: other
-    text: Other
-- id: q0
-  title: PII in memory
-  prompt: Does the product maintain personally identifiable information temporarily
     
