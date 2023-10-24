@@ -1,12 +1,4 @@
 id: module_2
 title: Python Test
 output: []
-questions:
-- id: p_id
-  title: Product ID
-  prompt: What is the ID?
-  type: text
-  impute:
-    - condition: p_id is == 0 
-      value: get_prod_id(project.module_1.prod_name)
-      value-mode: expression
+questions: []
