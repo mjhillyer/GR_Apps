@@ -8,7 +8,7 @@ output:
 questions:
 - id: base_risk
   title: Baseline Risk Level
-  prompt: What is {{prod.metadata.prod_name}}'s tentative Risk level?
+  prompt: What is the initial Risk level for the product?
   type: choice
   choices:
   - key: Low
@@ -61,7 +61,7 @@ questions:
     help: Does not match any other platform technology.
 - id: operating_system
   title: Application Operating System
-  prompt: '*CON* What operating systems will this product include?'
+  prompt: What operating systems will this product include?
   type: multiple-choice
   choices:
   - key: win
@@ -78,12 +78,12 @@ questions:
   max: ~
 - id: lifespan
   title: Operating System Lifespan
-  prompt: >-
-    Provide an estimate of the anticipated lifespan of the product. This includes
-    the expected duration for which the product will be actively supported and 
-    maintained after its initial release. Consider factors such as market demand, 
-    technological advancements, and regulatory requirements.
-  type: text
+  prompt: Provide an estimate of the anticipated lifespan of the product. This includes
+    the expected duration for which the product will be actively supported and  maintained
+    after its initial release. Consider factors such as market demand,  technological
+    advancements, and regulatory requirements.
+  type: longtext
+  min: 0
 - id: intended_use
   title: Intended Use
   prompt: Describe the Intended use of device in network-connected environment
