@@ -1,5 +1,5 @@
 id: get_prod_id
-title: Module 11
+title: Module 10
 output:
 - id: artifact_1
   format: markdown
@@ -11,6 +11,6 @@ questions:
   prompt: What is the product name?
   type: text
   impute:
-    - condition: {{get_prod_id(}} is not none
-      value: get_prod_id(project.get_prod_id.q1).key
+    - condition: {{get_prod_id}} is not none
+      value: get_prod_id(project.get_prod_id.q1)
       value-mode: expression
