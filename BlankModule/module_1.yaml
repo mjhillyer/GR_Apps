@@ -24,9 +24,9 @@ questions:
   - key: surgical
     text: Surgical
   - key: internal_hologic_projects
-    text: Internal_Hologic_Projects
+    text: Internal Hologic Projects
   - key: asoc_test
-    text: ASOC_Test   
+    text: ASOC Test   
 - id: prod_name
   title: Product Name
   prompt: What is the Product Name?
