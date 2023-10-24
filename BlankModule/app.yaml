@@ -1,7 +1,7 @@
 id: app
 title: Hologic Product Cybersecurity Program
 type: project
-version: 1.1
+version: 1.2
 icon: app.png
 introduction:
   format: markdown
@@ -24,7 +24,7 @@ catalog:
       Secure Product Design Program.
     long: |
       Provides Secure Product Design Program to enable a Secure by Design methodology.
-  version: 1.1
+  version: 1.2
 questions:
 - id: prod_metadata
 title: Module 1 - Information about the Product and the Product Team
