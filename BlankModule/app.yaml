@@ -27,7 +27,7 @@ catalog:
   version: 1.2
 questions:
 - id: module_1
-  title: Information about the Product and the Product Team
+  title: Product Information
   type: module
   module-id: module_1
 
