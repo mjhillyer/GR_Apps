@@ -14,10 +14,11 @@ introduction:
 input: []
 output: []
 catalog:
+  title: Hologic Product Cybersecurity Program
   category: Hologic
   vendor: Hologic
   vendor_url: http://hologic.com
-  status: Operational
+  status: stub
   source_url: https://github.com/mjhillyer/GR_Apps
   description:
     short: |
@@ -30,4 +31,3 @@ questions:
   title: Product Information
   type: module
   module-id: module_1
-
