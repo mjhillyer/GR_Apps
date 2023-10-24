@@ -1,0 +1,22 @@
+id: module_10
+title: Module 10
+output:
+- id: artifact_1
+  format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+questions:
+- id: q1
+  title: Product Name
+  prompt: What is the product name?
+  type: text
+  impute:
+    - condition: {{q1}} is not none
+      value: module_10({{q1}})
+      value-mode: expression
+- id: q2
+  title: Post Market Support Plan
+  prompt: >-
+    Product Name: {{q1}}
+    Product ID: {{module_10}}
+  type: interstitial

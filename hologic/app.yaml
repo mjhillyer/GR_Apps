@@ -1,11 +1,8 @@
 id: app
-title: Hologic Product Cyberseucity Program
+title: Hologic Product Cybersecurity Program
 type: project
-version: 0.1.22
-instance-name: New Hologic Product Workflow
+version: 2.0
 icon: app.png
-protocol:
-- hologic.npi
 introduction:
   format: markdown
   template: "The goal of The Hologic Secure Product Design Program is to provide a
@@ -20,13 +17,14 @@ catalog:
   category: Hologic
   vendor: Hologic
   vendor_url: http://hologic.com
-  status: stub
+  status: Operational
   source_url: https://github.com/mjhillyer/GR_Apps
   description:
-    short: Secure Product Design Program.
+    short: |
+      Secure Product Design Program.
     long: |
       Provides Secure Product Design Program to enable a Secure by Design methodology.
-  version: 0.1.22
+  version: 2.0
 questions:
 - id: prod_metadata
   title: Module 1 - Information about the Product and the Product Team
@@ -66,4 +64,4 @@ questions:
   module-id: module_3
 - id: module10
   title: Module 10 - Test Python Integration
-  module-id: get_prod_id
+  module-id: module_10
