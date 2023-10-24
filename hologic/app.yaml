@@ -1,7 +1,7 @@
 id: app
 title: Hologic Product Cyberseucity Program
 type: project
-version: 0.1.21
+version: 0.1.22
 instance-name: New Hologic Product Workflow
 icon: app.png
 protocol:
@@ -26,7 +26,7 @@ catalog:
     short: Create a new product record.
     long: |
       Provides Secure Product Design Program to enable a Secure by Design methodology.
-  version: 0.1.21
+  version: 0.1.22
 questions:
 - id: prod_metadata
   title: Module 1 - Information about the Product and the Product Team
