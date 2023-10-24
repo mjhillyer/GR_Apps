@@ -23,7 +23,7 @@ catalog:
   status: stub
   source_url: https://github.com/mjhillyer/GR_Apps
   description:
-    short: Create a new product record.
+    short: Secure Product Design Program.
     long: |
       Provides Secure Product Design Program to enable a Secure by Design methodology.
   version: 0.1.22
