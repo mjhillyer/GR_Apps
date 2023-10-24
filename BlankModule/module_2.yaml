@@ -10,9 +10,3 @@ questions:
     - condition: p_id is == 0 
       value: get_prod_id(project.module_1.prod_name)
       value-mode: expression
-- id: q2
-  title: Post Market Support Plan
-  prompt: >-
-    Product Name: {{project.module_1.prod_name}}
-    Product ID: {{p_id}}
-  type: interstitial
