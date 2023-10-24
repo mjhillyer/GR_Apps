@@ -25,5 +25,9 @@ catalog:
     long: |
       Provides Secure Product Design Program to enable a Secure by Design methodology.
   version: 1.1
-questions: []
+questions:
+- id: prod_metadata
+title: Module 1 - Information about the Product and the Product Team
+type: module
+module-id: module_1
 

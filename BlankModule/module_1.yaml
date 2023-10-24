@@ -1,0 +1,90 @@
+id: module_1
+title: Module 1
+output:
+- id: mod1out
+  title: Module 1 Output
+  format: markdown
+  filename: mod1
+  template: "R&D Team: {{rd_team}}\r\n\r\nProduct Name: {{prod_name}}\r\n\r\nProduct
+    Description: {{prod_desc}}\r\n\r\nLaunch Date: {{launch_date}}\r\n\r\nProduct
+    Team\r\n--------------------------------------------\r\nProduct Manager(s): \r\n{{prod_manager}}\r\n\r\nCybersecurity
+    Champion(s):\r\n{{champions}}\r\n\r\nR&D Engineering Manager:\r\n{{eng_dir}}"
+questions:
+- id: rd_team
+  title: Product R&D Division
+  prompt: What R&D engineering division is this product in?
+  type: choice
+  choices:
+  - key: breast
+    text: Breast Health
+  - key: skeletal
+    text: Skeletal Health
+  - key: surgical
+    text: Surgical Solutions
+  - key: molecular
+    text: Molecular Diagnostics
+  - key: cytology
+    text: Cytology Diagnostics
+  - key: hologic
+    text: Hologic IT
+- id: jstest
+  title: Javascript test
+  prompt: this is some text
+  type: longtext
+  default: paragraph
+  help: this is a paragraph input
+- id: prod_name
+  title: Product Name
+  prompt: What is the commercial name of the product?
+  type: text
+  actions:
+  - action: system/update_system_and_project_name/name
+    comment: Update system name and project name
+    value: '*'
+- id: prod_desc
+  title: Product Description
+  prompt: Please provide a description of the product.
+  type: longtext
+- id: prod_manager
+  title: Product Manager
+  prompt: Who is the product manager for {{prod_name}}
+  type: datagrid
+  min: 0
+  fields:
+  - key: Name
+    text: Product Manager Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  max: ~
+- id: champions
+  title: Product Cybersecurity Champions
+  prompt: Who are the cybersecurity champions for {{prod_name}}
+  type: datagrid
+  min: 0
+  fields:
+  - key: Name
+    text: Champion Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  max: ~
+- id: eng_dir
+  title: Engineering Manager
+  prompt: Who is the R&D Engineering manager for {{prod_name}}?
+  type: datagrid
+  fields:
+  - key: Name
+    text: Engineering Manager Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  min: 0
+  max: ~
+- id: launch_date
+  title: Launch Date
+  prompt: When is this product expected to go-live for commercial/public use?
+  type: date

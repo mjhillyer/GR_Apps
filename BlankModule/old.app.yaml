@@ -1,0 +1,39 @@
+id: app
+title: Hologic Reset
+type: project
+version: 1.0
+icon: app.png
+introduction:
+  format: markdown
+  template: Reset of the Hologic Workflow Modules
+output: []
+catalog:
+  category: Hologic
+  description:
+    long: |2+
+
+      Blank Project
+
+      **What App Does:**
+
+      - Used to batch create projects
+
+      **Support:**
+
+      This app is maintained by GovReady PBC.
+
+
+      Version 0.1 June 19, 2021
+      -------------------------
+
+      * Created
+
+    short: Blank project
+  source_url: https://github.com/mjhillyer/GR_Apps
+  status: stub
+  vendor: Hologic
+  vendor_url: http://hologic.com
+  parameters: []
+  version: '1.0'
+questions: []
+...
