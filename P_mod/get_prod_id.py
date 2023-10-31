@@ -1,8 +1,10 @@
 import requests
+import os
 
 def rname(name):
-    out = print("Well hello, " + name + ", it is nice to meet you!")
-    return out
+    f = open(name, "w")
+    f.write("This is a test " + name)
+    f.close
 
 def get_prod_id(prodname):
 
