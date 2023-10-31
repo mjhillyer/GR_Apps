@@ -1,34 +1,15 @@
 id: app
 title: Python Test
 type: project
-version: 1.2
+version: 1.3
 icon: app.png
-introduction:
-  format: markdown
-  template: "The goal of The Hologic Secure Product Design Program is to provide a
-    Secure by Design methodology to the product engineering activities that span the
-    entire product lifecycle from initial concept to product obsolescence. This allows
-    the product development team to 'shift left' their security activities, allowing
-    the inclusion of security features earlier in the development process. By shifting
-    left, the cost to mitigate any security risk is significantly reduced.   \n"
+introduction: []
 input: []
 output: []
-catalog:
-  title: Hologic Product Cybersecurity Program
-  category: Hologic
-  vendor: Hologic
-  vendor_url: http://hologic.com
-  status: stub
-  source_url: https://github.com/mjhillyer/GR_Apps
-  description:
-    short: |
-      Secure Product Design Program.
-    long: |
-      Provides Secure Product Design Program to enable a Secure by Design methodology.
-  version: 1.2
+catalog: []
 questions:
-- id: m1
-  title: Product Information
+- id: module_1
+  title: Python Test
   type: module
-  module-id: m1
+  module-id: module_1
 
