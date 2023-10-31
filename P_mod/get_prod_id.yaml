@@ -11,7 +11,7 @@ questions:
   type: test
   function: get_prod_id
   impute:
-      - condition: 1 + 1 = 2
+      - condition: if q99 == q99
         value: get_prod_id()
         value-mode: expression
 
