@@ -5,16 +5,12 @@ introduction:
   template: |
     This is a python test
 questions:
-- id: q99
+- id: get_prod_id
   title: Product Name
   prompt: Name?
-  type: text
+  type: external-function
   function: get_prod_id
-  impute:
-      - condition: get_prod_id() == 'successful'
-        value: yes
-        value-mode: expression
 - id: q52
   title: and?
-  prompt: output - {{q99}}
+  prompt: output - {{get_prod_id}}
   type: interstitial
