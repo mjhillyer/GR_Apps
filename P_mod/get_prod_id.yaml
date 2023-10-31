@@ -3,20 +3,15 @@ title: Python Testing
 introduction:
   format: markdown
   template: |
+    <p id="demo">A Paragraph.</p>
 
+    <button type="button" onclick="myFunction()">Try it</button>
 
-  <h2>Demo JavaScript in Body</h2>
-
-  <p id="demo">A Paragraph.</p>
-
-  <button type="button" onclick="myFunction()">Try it</button>
-
-  <script>
-  function myFunction() {
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
-  }
-  </script>
-
+    <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+    </script>
 
 questions:
 - id: get_prod_id
