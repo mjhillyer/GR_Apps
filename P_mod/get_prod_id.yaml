@@ -8,7 +8,10 @@ questions:
 - id: q99
   title: Product Name
   prompt: Name?
-  type: external-function
+  type: test
   function: get_prod_id
-
+  impute:
+      - condition: 
+        value: get_prod_id()
+        value-mode: expression
 
