@@ -1,20 +1,16 @@
-id: get_prod_id
+id: m1
 title: Module 1
-output:
-- id: artifact_1
-  format: markdown
-  title: What You Chose
-  template: '{{q1}}'
+output: []
 questions:
-- id: intro
-  title: intro
+- id: q1
+  title: q1
   prompt: What is your name?
   type: text
-- id: q1
+- id: q2
   title: Product Name
   prompt: Name
   type: external-function
   impute:
     - condition: q1 != 'Bob'
-      value: rname(intro)
+      value: rname(q1)
       value-mode: expression

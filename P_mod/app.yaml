@@ -1,7 +1,7 @@
 id: app
 title: Python Test
 type: project
-version: 1.1
+version: 1.2
 icon: app.png
 introduction:
   format: markdown
@@ -25,10 +25,10 @@ catalog:
       Secure Product Design Program.
     long: |
       Provides Secure Product Design Program to enable a Secure by Design methodology.
-  version: 1.1
+  version: 1.2
 questions:
-- id: get_prod_id
+- id: m1
   title: Product Information
   type: module
-  module-id: get_prod_id
+  module-id: m1
 
