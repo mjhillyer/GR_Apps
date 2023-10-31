@@ -17,6 +17,6 @@ questions:
   function: rname
 - id: q3
   title: Did it work?
-  prompt: Output: {{q2}}
+  prompt: Here is my output - {{q2}}
   type: interstitial
 
