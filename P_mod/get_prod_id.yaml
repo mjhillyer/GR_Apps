@@ -15,6 +15,6 @@ questions:
   prompt: Name
   type: external-function
   impute:
-    - condition: q1 is not null 
+    - condition: q1 != 'Bob'
       value: rname(intro)
       value-mode: expression
