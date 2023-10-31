@@ -5,13 +5,9 @@ introduction:
   template: |
     This is a python test
 questions:
-- id: q1
-  title: q1
-  prompt: What is the filename?
-  type: text
-- id: q2
+- id: q99
   title: Product Name
-  prompt: Name
+  prompt: Name?
   type: external-function
   function: get_prod_id
 
