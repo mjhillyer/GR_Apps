@@ -1,7 +1,7 @@
 import requests
 
 def rname(name):
-    out = rname(name)
+    out = print("Well hello, " + name + " it is nice to meet you!")
     return out
 
 def get_prod_id(prodname):
@@ -29,3 +29,5 @@ def get_prod_id(prodname):
 
 #prod_id = get_prod_id('Brevera')
 #print(prod_id)
+out = rname('william')
+print(out)
