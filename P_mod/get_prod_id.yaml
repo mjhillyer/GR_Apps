@@ -13,6 +13,6 @@ questions:
   title: Product Name
   prompt: Name
   type: external-function
-  function: rname_func(q1)
+  function: get_prod_id
 
 

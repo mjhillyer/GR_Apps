@@ -1,35 +1,4 @@
-import requests
-import os
-
-def rname(name):
-    f = open(name, "w")
-    f.write("This is a test " + name)
+def get_prod_id():
+    f = open("Unicorns.txt", "a")
+    f.write("This is a test")
     f.close
-
-def get_prod_id(prodname):
-
-    dojo_base_url = 'http://usmarprsec01:8080'
-    dojo_token = 'Token 01b67547c3585a602d24f1a2c2367b3635366b6a'
-
-    url = dojo_base_url + '/api/v2/products/?name=' + prodname
-
-    payload = {
-    }
-
-    headers = {
-        'Authorization': dojo_token,
-        'accept': 'application/json'
-    }
-
-    webcall = requests.request("GET", url, headers=headers, data=payload)
-
-    results = webcall.json()
-
-    prodid = results['results'][0]['id']
-
-    return prodid
-
-#prod_id = get_prod_id('Brevera')
-#print(prod_id)
-#out = rname('william')
-#print(out)
