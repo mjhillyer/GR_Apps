@@ -11,7 +11,7 @@ questions:
   type: test
   function: get_prod_id
   impute:
-      - condition: q99 is not null
+      - condition: q99 != ''
         value: get_prod_id()
         value-mode: expression
 
