@@ -13,7 +13,10 @@ questions:
   title: Product Name
   prompt: Name
   type: external-function
-  impute:
-    - condition: q1 != 'Bob'
-      value: rname(q1)
-      value-mode: expression
+  help: This may take a few minutes.
+  function: rname
+- id: q3
+  title: Did it work?
+  prompt: Output: {{q2}}
+  type: interstitial
+
