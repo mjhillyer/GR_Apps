@@ -16,5 +16,5 @@ questions:
         value-mode: expression
 - id: q52
   title: and?
-  prompt: {{q99}}
+  prompt: output - {{q99}}
   type: interstitial
