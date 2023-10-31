@@ -8,5 +8,4 @@ questions:
 - id: get_prod_id
   title: Product Name
   prompt: Name?
-  type: external-function
-  function: get_prod_id
+  type: text
