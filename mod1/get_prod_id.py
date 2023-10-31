@@ -1,5 +1,9 @@
 import requests
 
+def rname(name):
+    out = rname(name)
+    return out
+
 def get_prod_id(prodname):
 
     dojo_base_url = 'http://usmarprsec01:8080'
