@@ -1,6 +1,9 @@
 id: module_1
 title: Module 1
-output: []
+introduction:
+  format: markdown
+  template: |
+    This is a python test
 questions:
 - id: q1
   title: q1
