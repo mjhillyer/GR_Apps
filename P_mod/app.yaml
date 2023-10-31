@@ -10,7 +10,7 @@ catalog:
   category: Testing
   version: 1.3
 questions:
-- id: ptest
+- id: get_prod_id
   title: Python Test
   type: module
   module-id: get_prod_id
