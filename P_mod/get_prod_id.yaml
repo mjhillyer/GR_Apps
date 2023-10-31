@@ -13,7 +13,6 @@ questions:
   title: Product Name
   prompt: Name
   type: external-function
-  help: This may take a few minutes.
   function: rname_func(q1)
 
 
