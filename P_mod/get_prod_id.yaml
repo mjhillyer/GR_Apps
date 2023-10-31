@@ -3,14 +3,10 @@ title: Python Testing
 introduction:
   format: markdown
   template: |
-    This is a python test
+    {{ get_prod_id() }}
 questions:
 - id: get_prod_id
   title: Product Name
   prompt: Name?
   type: external-function
   function: get_prod_id
-- id: q52
-  title: and?
-  prompt: output - {{get_prod_id}}
-  type: interstitial
