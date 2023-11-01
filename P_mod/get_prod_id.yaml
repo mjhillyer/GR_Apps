@@ -3,12 +3,9 @@ title: Python Testing
 introduction:
   format: markdown
   template: |
-   This should run a python script!
+   {{ get_prod_id() }}
 questions:
   - id: prod_id
     title: Run Script
-    prompt: 
-    type: external-function
-    help: This may take a few minutes.
-    function: get_prod_id
-    required: true # don't consider the module finished until this is run
+    prompt: hello!
+    type: text
