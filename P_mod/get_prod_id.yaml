@@ -3,25 +3,10 @@ title: Python Testing
 introduction:
   format: markdown
   template: |
-    <script>
-      
-      var settings = {
-      "url": "http://usmarprsec01:8080/api/v2/products/6/",
-      "method": "GET",
-      "timeout": 0,
-      "headers": {
-        "Authorization": "Token 01b67547c3585a602d24f1a2c2367b3635366b6a"
-        },
-      };
-
-        $.ajax(settings).done(function (response) {
-          console.log(response);
-        });
-
-    </script>
-
+    This is a python test
 questions:
-- id: get_prod_id
+- id: q99
   title: Product Name
   prompt: Name?
-  type: text
+  type: external-function
+  function: get_prod_id
