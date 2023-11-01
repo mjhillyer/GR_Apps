@@ -6,10 +6,10 @@ introduction:
    This should run a python script!
 questions:
 - id: prod_id
-    title: Run Script
-    prompt: Click 'Go' to create the records in Watchtower.
-    type: external-function
-    help: This may take a few minutes.
-    function: get_prod_id
-    required: true # don't consider the module finished until this is run
-    ask-first:
+  title: Run Script
+  prompt: Click 'Go' to create the records in Watchtower.
+  type: external-function
+  help: This may take a few minutes.
+  function: get_prod_id
+  required: true # don't consider the module finished until this is run
+  ask-first:
