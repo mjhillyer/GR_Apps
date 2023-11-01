@@ -1,0 +1,42 @@
+id: module_1
+title: Module 1
+output:
+- id: module_10
+  title: module 10 - submit info
+  format: markdown
+  template: |
+    <script>
+      function createDojoProduct(prod_name, prod_desc, rd_team) {
+        const dojoBaseUrl = 'http://usmarprsec01:8080';
+        const dojoToken = 'Token 01b67547c3585a602d24f1a2c2367b3635366b6a';
+
+        const url = dojoBaseUrl + '/api/v2/products/';
+
+        const payload = {
+            name: prodname,
+            description: proddesc,
+            lifecycle: 'production',
+            origin: 'internal',
+            prod_type: prodteam
+        };
+
+        const headers = {
+            Authorization: dojoToken
+        };
+
+        const requestOptions = {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(payload)
+        };
+
+        return fetch(url, requestOptions)
+            .then(response => response.json())
+            .then(results => results.id);
+    }
+</script>
+questions:
+- id: q0
+  title: Submit Data
+  prompt: I will now create and integrate a product record into Watchtower:Commander.
+  type: interstitial
