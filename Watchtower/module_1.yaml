@@ -23,12 +23,6 @@ questions:
     text: Cytology Diagnostics
   - key: hologic
     text: Hologic IT
-- id: jstest
-  title: Javascript test
-  prompt: this is some text
-  type: longtext
-  default: paragraph
-  help: this is a paragraph input
 - id: prod_name
   title: Product Name
   prompt: What is the commercial name of the product?
