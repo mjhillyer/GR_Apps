@@ -5,11 +5,10 @@ introduction:
   template: |
    This should run a python script!
 questions:
-- id: prod_id
-  title: Run Script
-  prompt: Click 'Go' to create the records in Watchtower.
-  type: external-function
-  help: This may take a few minutes.
-  function: get_prod_id
-  required: true # don't consider the module finished until this is run
-  ask-first:
+  - id: prod_id
+    title: Run Script
+    prompt: Click 'Go' to create the records in Watchtower.
+    type: external-function
+    help: This may take a few minutes.
+    function: get_prod_id
+    required: true # don't consider the module finished until this is run
