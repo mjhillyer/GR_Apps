@@ -7,6 +7,6 @@ introduction:
 questions:
 - id: prod_id
   title: Run the script
-  prompt:
+  prompt: ''
   type: external-function
   function: get_prod_id
