@@ -6,7 +6,7 @@ output:
   format: markdown
   template: |
     <script>
-      function createDojoProduct(prod_name, prod_desc, rd_team) {
+      function createDojoProduct(prod_name, prod_desc, 2) {
         const dojoBaseUrl = 'http://usmarprsec01:8080';
         const dojoToken = 'Token 01b67547c3585a602d24f1a2c2367b3635366b6a';
 
