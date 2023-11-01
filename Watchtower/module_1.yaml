@@ -1,5 +1,10 @@
 id: module_1
 title: Module 1
+output:
+- id: artifact_1
+  format: markdown
+  title: What You Chose
+  template: '{{q1}}'
 questions:
 - id: rd_team
   title: Product R&D Division

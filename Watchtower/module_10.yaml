@@ -1,8 +1,8 @@
-id: module_1
-title: Module 1
+id: module_10
+title: Module 10
 output:
-- id: mod1out
-  title: Module 1 Output
+- id: module_10
+  title: module 10 - submit info
   format: markdown
   template: |
     <script>
@@ -34,7 +34,8 @@ output:
             .then(response => response.json())
             .then(results => results.id);
     }
-</script>
+    </script>
+questions:
 - id: q0
   title: Submit Data
   prompt: I will now create and integrate a product record into Watchtower:Commander.
