@@ -1,14 +1,14 @@
 id: app
 title: Python Test
 type: project
-version: 1.36
+version: 1.37
 icon: app.png
 introduction:
   format: markdown
   template: GovReady System Questionnaires
 catalog: 
   category: Testing
-  version: 1.36
+  version: 1.37
 questions:
 - id: get_prod_id
   title: Python Test
