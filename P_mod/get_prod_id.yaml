@@ -6,7 +6,6 @@ introduction:
    This should run a python script!
 questions:
 - id: prod_id
-  title: Run the script
   prompt: ''
   type: external-function
   function: get_prod_id
