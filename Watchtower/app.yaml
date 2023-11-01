@@ -1,7 +1,7 @@
 id: app
 title: Hologic Product Cybersecurity Program
 type: project
-version: 1.0
+version: 1.1
 icon: app.png
 introduction:
   format: markdown
@@ -19,7 +19,7 @@ catalog:
       Secure Product Design Program.
     long: |
       Provides a workflow to enable a Secure by Design methodology.
-  version: 1.0
+  version: 1.1
 questions:
 - id: prod_metadata
   title: Module 1 - Information about the Product and the Product Team
@@ -57,4 +57,8 @@ questions:
   title: Module 9 - 3rd Party Commercial Components Assessment
   type: module
   module-id: module_9
+- id: submit_data
+  title: Module 1S - Submit Data to Watchtower:Commander
+  type: module
+  module-id: module_10  
 
