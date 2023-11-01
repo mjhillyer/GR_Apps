@@ -4,4 +4,8 @@ introduction:
   format: markdown
   template: |
    Product ID will be: {{ get_prod_id(prodname, prod_desc, 2) }}
-questions: 
+questions:
+- id: prod_name
+  title: Product Name
+  prompt: What?
+  type: text 
