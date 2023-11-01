@@ -3,9 +3,10 @@ title: Python Testing
 introduction:
   format: markdown
   template: |
-    {{ get_prod_id }}
+   This should run a python script!
 questions:
 - id: prod_id
-  title: Product ID (secretly running a python script)
-  prompt: What is the product ID?
-  type: text
+  title: Run the script
+  prompt:
+  type: external-function
+  function: get_prod_id
