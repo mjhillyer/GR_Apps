@@ -7,6 +7,5 @@ introduction:
 questions:
 - id: q99
   title: Product Name
-  prompt: Name?
   type: external-function
   function: get_prod_id
