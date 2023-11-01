@@ -3,7 +3,7 @@ title: Module 10
 introduction:
   format: markdown
   template: |
-   Product ID will be: {{ create_dojo_product(prodname, prod_desc, 2) }}
+   Product ID will be: {{ create_dojo_product({{prod_name}}, {{prod_desc}}, 2) }}
 questions:
 - id: prod_name
   title: Process
