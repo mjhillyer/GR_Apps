@@ -5,7 +5,7 @@ introduction:
   template: |
    Product ID will be: {{ create_dojo_product(project.module_1.prod_name, project.module_1.prod_desc, 2) }}
 questions:
-- id: prod_name
+- id: run_me_daddy
   title: Process
   prompt: Processing Data ...
   type: interstitial 
