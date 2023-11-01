@@ -3,9 +3,9 @@ title: Module 10
 introduction:
   format: markdown
   template: |
-   Product ID will be: {{ get_prod_id(prodname, prod_desc, 2) }}
+   Product ID will be: {{ create_dojo_product(prodname, prod_desc, 2) }}
 questions:
 - id: prod_name
-  title: Product Name
-  prompt: What?
-  type: text 
+  title: Process
+  prompt: Processing Data ...
+  type: interstitial 
