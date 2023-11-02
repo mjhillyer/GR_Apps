@@ -25,16 +25,19 @@ questions:
   title: Introduction to Threat Modeling
   type: module
   module-id: tm_intro
+  group: Threat Modeling
 - id: tm_training
   title: Threat Modeling Training
   type: module
   module-id: tm_training
+  group: Threat Modeling
 - id: tm_tools
   title: Threat Model Tools
   type: module
   module-id: tm_tools
+  group: Threat Modeling
 - id: upload_tm
   title: 'Upload Threat Model into Watchtower: Flow'
   type: module
   module-id: upload_tm
-
+  group: Threat Modeling
