@@ -1,0 +1,57 @@
+id: tm_training
+title: Threat Model Training
+questions:
+- id: tm_up_welcome
+  title: Welcome
+  prompt: >-
+    Welcome
+questions:
+- id: tm_training_intro
+  title: Introduction
+  prompt: >-
+    Threat Model Training Module:
+
+
+    I'm thrilled to introduce you to the concept of Threat Modeling, a crucial step
+    towards ensuring the security and integrity of our medical devices. As your dedicated
+    Product Security Robot, it's my priority to equip you with the knowledge and skills
+    needed to safeguard our products against potential risks and threats.
+  type: interstitial
+- id: tm_stride
+  title: STRIDE Methodology
+  prompt: |-
+    The STRIDE Methodology
+
+    One of the methodologies we'll be using is called STRIDE, which helps us categorize and analyze different types of threats. Here's a brief overview:
+
+    **Spoofing Identity:** Addresses the potential for someone to impersonate a legitimate user or system.
+
+    **Tampering with Data:** Focuses on unauthorized alterations or modifications to data.
+
+    **Repudiation:** Involves denying an action or event, making it difficult to trace back to its origin.
+
+    **Information Disclosure:** Deals with unauthorized access to sensitive information.
+
+    **Denial of Service (DoS):** Concerns preventing legitimate users from accessing a service.
+
+    **Elevation of Privilege:** Examines unauthorized escalation of user privileges.
+
+    By breaking down potential threats into these categories, we can more effectively plan and implement security measures.
+  type: interstitial
+- id: tm_ext_training
+  title: External Training Sources
+  prompt: |-
+    Next Steps: External Training Resources
+
+    For those of you eager to dive deeper into threat modeling, I've made a short list of external resources that provide more detailed training:
+
+    Microsoft's Threat Modeling Tool Overview: [link](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool)
+
+    OWASP Threat Modeling Cheat Sheet: [link](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
+
+    Introduction to STRIDE Threat Modeling: [link](https://www.youtube.com/watch?v=ChFXXovP4yE)
+
+    Remember, the goal of this is to empower you with the skills to identify and mitigate potential risks in our medical devices. If you have any questions or need further guidance, please don't hesitate to reach out to the Product Security Team.
+
+    Thank you for your dedication to ensuring the safety and security of our products. Let's work together to build devices that our users can trust.
+  type: interstitial
