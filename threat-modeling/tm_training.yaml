@@ -1,11 +1,6 @@
 id: tm_training
 title: Threat Model Training
 questions:
-- id: tm_up_welcome
-  title: Welcome
-  prompt: >-
-    Welcome
-questions:
 - id: tm_training_intro
   title: Introduction
   prompt: >-
