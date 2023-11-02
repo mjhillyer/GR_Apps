@@ -1,0 +1,87 @@
+id: tm_intro
+title: Introduction to Threat Modeling
+questions:
+- id: welcome_to_tm
+  title: Welcome to Threat Modeling
+  prompt: >-
+    Hello and welcome to the wonderful world of threat modeling!
+
+
+    I am excited to introduce you to the concept of threat modeling in the context
+    of medical device security. As your dedicated Product Security Support Robot,
+    my goal is to ensure that our medical devices are not only innovative and effective
+    but also safeguarded against potential risks and threats.
+  type: interstitial
+- id: what_is_tm
+  title: What is Threat Modeling?
+  prompt: >-
+    So, what exactly is threat modeling?
+
+
+    Think of threat modeling as a structured approach to identifying, assessing, and
+    mitigating potential risks and vulnerabilities in our medical devices. It's a
+    bit like a detailed blueprint that helps us design with security in mind. By understanding
+    how our devices may be targeted, we can implement measures to protect them and
+    the data they handle.
+
+
+    To put it in simpler terms, consider it akin to how a car manufacturer thinks
+    about safety. They anticipate potential risks like accidents, and they design
+    the car with features like seat belts, airbags, and crumple zones to protect passengers.
+
+
+    In our case, we'll be analyzing every aspect of our medical devices, from the
+    software code to the physical components, to ensure we've considered all possible
+    threats. This could range from malicious attacks by external actors to unintentional
+    system failures.
+  type: interstitial
+- id: tm_process
+  title: Threat Modeling Process
+  prompt: >-
+    Here's what the process typically involves:
+
+
+    **Step 1: Identification of Assets and Entry Points:** We'll identify the valuable
+    assets within our device (such as patient data) and the potential entry points
+    for threats (like network interfaces or USB ports).
+
+
+    **Step 2: Threat Enumeration:** We'll brainstorm and list down all possible threats
+    that could affect our device. This could include anything from software vulnerabilities
+    to physical tampering.
+
+
+    **Step 3: Vulnerability Assessment:** For each identified threat, we'll evaluate
+    the existing vulnerabilities and weaknesses in our device that might make it susceptible
+    to that threat.
+
+
+    **Step 4: Risk Prioritization:** We'll categorize and prioritize the identified
+    threats based on their potential impact on our device and the likelihood of them
+    occurring.
+
+
+    **Step 5: Mitigation Strategies:** Finally, we'll devise strategies and countermeasures
+    to mitigate or eliminate these identified risks. This might involve design changes,
+    security features, or additional protocols.
+  type: interstitial
+- id: tm_conclusion
+  title: Wrapping up...
+  prompt: >-
+    So, wrapping up,
+
+
+    By incorporating threat modeling into our development process, we're ensuring
+    that security is an integral part of what we create. It's about proactively protecting
+    not only our devices but also the trust and well-being of the patients who rely
+    on them.
+
+
+    I'm here to guide and support you throughout this journey. If you have any questions
+    or need further clarification, please don't hesitate to reach out to the Product
+    Security Team. Together, we will all make sure our medical devices stand strong
+    against any potential threat.
+
+
+    Thank you for your commitment to excellence and security in our products!
+  type: interstitial

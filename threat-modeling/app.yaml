@@ -1,0 +1,43 @@
+id: app
+title: Threat Modeling
+type: project
+version: 1.0
+icon: app.png
+introduction:
+  format: markdown
+  template: Hologic Product Security - Threat Modeling
+catalog:
+  category: Secure By Design
+  vendor: Hologic
+  vendor_url: http://hologic.com
+  status: stub
+  source_url: https://github.com/mjhillyer/GR_Apps
+  description:
+    short: Create and manage threat models for a product.
+    long: |
+      Hologic Product Cybersecurity Program
+      ====================================
+
+      Provides a workflow for managing Threat Modeling activities.
+  version: '1.0'
+questions:
+- id: tm_intro
+  title: Introduction to Threat Modeling
+  type: module
+  module-id: tm_intro
+  group: Threat Modeling
+- id: tm_training
+  title: Threat Modeling Training
+  type: module
+  module-id: tm_training
+  group: Threat Modeling
+- id: tm_tools
+  title: Threat Model Tools
+  type: module
+  module-id: tm_tools
+  group: Threat Modeling
+- id: upload_tm
+  title: 'Upload Threat Model into Watchtower: Flow'
+  type: module
+  module-id: upload_tm
+  group: Threat Modeling
