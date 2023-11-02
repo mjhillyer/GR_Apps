@@ -1,13 +1,11 @@
 id: app
-title: Hologic Product Cybersecurity Program
+title: Threat Modeling
 type: project
-version: 1.3
+version: 1.0
 icon: app.png
 introduction:
   format: markdown
-  template: Hologic Product Security Workflow
-input: []
-output: []
+  template: Hologic Product Security - Threat Modeling
 catalog:
   category: Secure By Design
   vendor: Hologic
@@ -15,51 +13,28 @@ catalog:
   status: stub
   source_url: https://github.com/mjhillyer/GR_Apps
   description:
-    short: |
-      Secure Product Design Program.
+    short: Create and manage threat models for a product.
     long: |
-      Provides a workflow to enable a Secure by Design methodology.
-  version: 1.3
-questions:
-- id: module_1
-  title: Module 1 - Information about the Product and the Product Team
-  type: module
-  module-id: module_1
-- id: module_10
-  title: Module 1S - Submit Data to Watchtower:Commander
-  type: module
-  module-id: module_10
-- id: init_assessment
-  title: Module 2 - Product Operational and Environmental Assessment
-  type: module
-  module-id: module_2
-- id: post_market
-  title: Module 3 - Post Market Support Plan
-  type: module
-  module-id: module_3
-- id: min_requirements
-  title: Module 4 - Minimum Security Requirements Assessment
-  type: module
-  module-id: module_4
-- id: prod_controls
-  title: Module 5 - Product Security Controls
-  type: module
-  module-id: module_5
-- id: pia
-  title: Module 6 - Privacy Assessment & Data Dictionary
-  type: module
-  module-id: module_6
-- id: des_rvw
-  title: 'Module 7 - Product Concept: Technical Design Review'
-  type: module
-  module-id: module_7
-- id: prod_doc
-  title: Module 8 - Product Security Documentation
-  type: module
-  module-id: module_8
-- id: third_party
-  title: Module 9 - 3rd Party Commercial Components Assessment
-  type: module
-  module-id: module_9
+      Hologic Product Cybersecurity Program
+      ====================================
 
+      Provides a workflow for managing Threat Modeling activities.
+  version: '1.0'
+questions:
+- id: tm_intro
+  title: Introduction to Threat Modeling
+  type: module
+  module-id: tm_intro
+- id: tm_training
+  title: Threat Modeling Training
+  type: module
+  module-id: tm_training
+- id: tm_tools
+  title: Threat Model Tools
+  type: module
+  module-id: tm_tools
+- id: upload_tm
+  title: 'Upload Threat Model into Watchtower: Flow'
+  type: module
+  module-id: upload_tm
 
