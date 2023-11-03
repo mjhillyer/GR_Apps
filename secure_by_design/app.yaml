@@ -1,0 +1,51 @@
+id: app
+title: Updated Secure By Design
+type: project
+version: 1.1
+icon: app.png
+introduction:
+  format: markdown
+  template: Hologic Product Security Workflow
+catalog:
+  category: Secure By Design
+  vendor: Hologic
+  vendor_url: http://hologic.com
+  status: stub
+  source_url: https://github.com/mjhillyer/GR_Apps
+  description:
+    short: |
+      Secure Product Design Program.
+    long: |
+      Hologic Product Cyberseucity Program
+      ====================================
+
+      Provides Secure Product Design Program to enable a Secure by Design methodology.
+  version: '1.1'
+questions:
+- id: dev_team_info
+  title: Product Information
+  type: module
+  module-id: dev_team_info
+  group: sbd
+- id: design_assessment
+  title: Design and Environmental Risk Evaluation
+  type: module
+  module-id: design_assessment
+  group: sbd
+- id: min_requirements
+  title: Security Requirements
+  type: module
+  module-id: min_requirements
+  group: sbd
+- id: prod_controls
+  title: Product Security Controls
+  type: module
+  module-id: prod_controls
+  group: sbd
+- id: pia
+  title: Privacy Assessment & Data Dictionary
+  type: module
+  module-id: pia
+  group: sbd
+
+
