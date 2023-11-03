@@ -1,0 +1,20 @@
+id: submit
+title: Submit Data
+introduction:
+  format: markdown
+  template: |
+    Product ID will be: {{ create_dojo_product(project.module_1.prod_name, project.module_1.prod_desc, 2) }}
+python-module: "def create_dojo_product(prodname, proddesc, prodteam):\r\n    import
+  requests\r\n    \r\n    dojo_base_url = 'http://10.250.105.125:8080'\r\n    dojo_token
+  = 'Token 01b67547c3585a602d24f1a2c2367b3635366b6a'\r\n\r\n    url = dojo_base_url
+  + '/api/v2/products/'\r\n\r\n    payload = {'name':prodname,\r\n        'description':proddesc,\r\n
+  \       'lifecycle':'production',\r\n        'origin':'internal',\r\n        'prod_type':prodteam\r\n
+  \   }\r\n\r\n    headers = {\r\n        'Authorization':dojo_token  \r\n    }\r\n\r\n
+  \   webcall = requests.request(\"POST\", url, headers=headers, data=payload)\r\n\r\n
+  \   results = webcall.json()\r\n\r\n    prodid = results[\"id\"]\r\n\r\n    return
+  prodid\r\n\r\ncreate_dojo_product(\"Python Test\", \" a desc.\", 2)"
+questions:
+- id: run_me_daddy
+  title: Process
+  prompt: Processing Data ...
+  type: interstitial
