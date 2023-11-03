@@ -52,28 +52,4 @@ questions:
   type: module
   module-id: pia
   group: sbd
-- id: des_rvw
-  title: Product Concept and Technical Design Review
-  type: module
-  module-id: des_rvw
-  group: sbd
-- id: prod_doc
-  title: Product Security Documentation
-  type: module
-  group: sbd
-  module-id: prod_doc
-- id: third_party
-  title: 3rd Party Commercial Components Assessment
-  type: module
-  group: sbd
-  module-id: third_party
-- id: post_market
-  title: Post Market Support Plan
-  type: module
-  group: sbd
-  module-id: post_market
-- id: submit
-  title: Submit Data to Watchtower:Commander
-  type: module
-  group: sbd
-  module-id: - id: submit
+
