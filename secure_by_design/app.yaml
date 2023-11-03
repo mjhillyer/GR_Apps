@@ -32,10 +32,10 @@ questions:
   type: module
   module-id: design_assessment
   group: sbd
-- id: threat_model
+- id: tm_november
   title: Threat Modeling
   type: module
-  module-id: threat_model
+  module-id: tm_november
   group: sbd
 - id: min_requirements
   title: Security Requirements
