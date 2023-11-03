@@ -1,0 +1,186 @@
+id: min_requirements
+title: Minimum Security Requirements
+questions:
+- id: mrq1
+  title: Authentication Credentials
+  prompt: Are all of the authentication credentials configurable and changeable?
+  type: yesno
+- id: ex01
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan (if any)
+    to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq1 == 'yes'
+    value: ~
+- id: ex01_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq1 == 'yes'
+    value: ~
+  ask-first:
+  - ex01
+- id: mrq2
+  title: Roles of Least Privilege
+  prompt: Does the product support user/role privilege levels that restrict user/role
+    permissions to the minimum required to perform necessary defined functions?
+  type: yesno
+- id: ex02
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan (if any)
+    to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq2 == 'yes'
+    value: ~
+- id: ex02_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: rmrq2 == 'yes'
+    value: ~
+  ask-first:
+  - ex02
+- id: mrq3
+  title: Encryption at Rest
+  prompt: Does the product encrypt all PII, PHI, and sensitive data (including authentication
+    credentials) at rest using FIPS 140-3 compliant Level 1 or better encryption?
+  type: yesno
+- id: ex03
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan (if any)
+    to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq3 == 'yes'
+    value: ~
+- id: ex03_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq3 == 'yes'
+    value: ~
+  ask-first:
+  - ex03
+- id: mrq4
+  title: Encryption in Transit
+  prompt: Does the product encrypt all PII, PHI, and other sensitive data (including
+    authentication credentials) in transit using FIPS 140-3 compliant Level 1 or higher
+    standards for ciphers and key sizes?
+  type: yesno
+- id: ex04
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan (if any)
+    to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq4 == 'yes'
+    value: ~
+- id: ex04_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq4 == 'yes'
+    value: ~
+  ask-first:
+  - ex04
+- id: mrq5
+  title: Secure Wipe
+  prompt: Does the product provide the capability to securely remove all PHI, PII,
+    and other sensitive data on demand, such that, at a minimum, the cryptographic
+    key for encrypted data is destroyed, or all data is overwritten with at least
+    one pass of all 1s or all 0s?
+  type: yesno
+- id: ex05
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan (if any)
+    to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq5 == 'yes'
+    value: ~
+- id: ex05_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq5 == 'yes'
+    value: ~
+  ask-first:
+  - ex05
+- id: mrq6
+  title: Product Hardening
+  prompt: Is the product hardened (all unneeded ports, software, and services are
+    removed and/or disabled by default)?
+  type: yesno
+- id: ex06
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan (if any)
+    to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq6 == 'yes'
+    value: ~
+- id: ex06_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq6 == 'yes'
+    value: ~
+  ask-first:
+  - ex06
+- id: mrq7
+  title: Malicious Software Protections
+  prompt: Does the product include protection from malicious software (e.g., anti-virus,
+    application whitelisting)?
+  type: yesno
+- id: ex07
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan (if any)
+    to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq7 == 'yes'
+    value: ~
+- id: ex07_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq7 == 'yes'
+    value: ~
+  ask-first:
+  - ex07
+- id: mrq8
+  title: Audit Logging
+  prompt: Does the product provide audit logging capability for both clinical/application
+    and system events?
+  type: yesno
+- id: q0
+  title: New Question Title
+  prompt: Exception is needed
+  type: interstitial
+- id: ex08
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan (if any)
+    to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq8 == 'yes'
+    value: ~
+- id: ex08_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq8 == 'yes'
+    value: ~
+  ask-first:
+  - ex08
+  
