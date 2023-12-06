@@ -1,5 +1,9 @@
 id: dev_team_info
 title: Information about the Product Core Team
+introduction:
+  format: markdown
+  template: |
+   {{ create_dojo_product({{prod_name}}, {{prod_desc}}, {{rd_team}}) }}
 output: []
 questions:
 - id: rd_team
@@ -94,3 +98,4 @@ questions:
   title: Launch Date  
   prompt: When is this product expected date for the product ship?
   type: date
+

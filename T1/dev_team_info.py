@@ -10,7 +10,8 @@ def create_dojo_product(prodname, proddesc, prodteam):
         'description':proddesc,
         'lifecycle':'production',
         'origin':'internal',
-        'prod_type':prodteam
+        #'prod_type':prodteam
+        'prod_type':2
     }
 
     headers = {
