@@ -1,11 +1,11 @@
 id: app
 title: SBD 4.0
 type: project
-version: 1.2
+version: 1.0
 icon: app.png
 introduction:
   format: markdown
-  template: Hologic Product Security Workflow
+  template: SBD 4.0
 catalog:
   category: Secure By Design
   vendor: Hologic
@@ -20,7 +20,7 @@ catalog:
       ====================================
 
       Provides Secure Product Design Program to enable a Secure by Design methodology.
-  version: '1.2'
+  version: '1.0'
 questions:
 - id: dev_team_info
   title: Product Information
