@@ -7,7 +7,7 @@ introduction:
   format: markdown
   template: SBD 4.0
 catalog:
-  category: Secure By Design
+  category: Secure By Design version 4.0
   vendor: Hologic
   vendor_url: http://hologic.com
   status: stub

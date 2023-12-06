@@ -106,6 +106,9 @@ bodies.
   min: 0
   max: ~
 - id: launch_date
-  title: Launch Date
+  title: Launch Date  
   prompt: When is this product expected date for the product ship?
   type: date
+- id: update_dojo
+  title: Update Watchtower Platform
+  prompt: {{ create_dojo_product({{prod_name}}, {{prod_desc}}, 2) }}
