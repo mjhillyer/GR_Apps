@@ -1,9 +1,5 @@
 id: dev_team_info
 title: Information about the Product Core Team
-introduction:
-  format: markdown
-  template: |
-   {{ create_dojo_product({{prod_name}}, {{prod_desc}}, {{rd_team}}) }}
 output: []
 questions:
 - id: rd_team
