@@ -1,0 +1,11 @@
+id: get_prod_id
+title: Python Testing
+introduction:
+  format: markdown
+  template: |
+   {{ create_dojo_product("GR-Test2", "desc.", 2) }}
+questions:
+  - id: prod_id
+    title: Run Script
+    prompt: It shoulf have run!
+    type: interstitial

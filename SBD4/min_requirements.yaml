@@ -1,0 +1,265 @@
+id: min_requirements
+title: Minimum Security Requirements
+questions:
+- id: msr_intro
+  title: Hologic Product Minimum Security Requirements
+  prompt: To address the increasing risks associated with digital environments, 
+    it is imperative to establish and enforce minimum security requirements that 
+    all products must incorporate. These requirements are necessary to safeguard 
+    user data, protect against unauthorized access and data breaches, and foster 
+    trust and confidence in the product and its services. By implementing these 
+    requirements, product developers can ensure the integrity and privacy of user 
+    information, reduce potential security vulnerabilities, and align their practices 
+    with industry standards and best practices.
+  type: interstitial
+- id: mrq1
+  title: (MSR01) All authentication credentials shall be configurable and changeable.
+  prompt: Are all of the authentication credentials configurable and changeable? This
+    means that there are no hardcoded credentials int he product.
+
+    If there are any hardcoded or fixed credentials or keys, answer No and list what 
+    the fixed credentials or keys are in the Comment field on the following exception page.
+
+    If there are no credentials or keys at all, answer "It doesn't apply"
+
+    Related NIST Controls- IA-5(2), SC-12(2), SC-12(3)
+
+  type: yesno
+  actions:
+  - action: element/add_role/MSR
+    comment: Adding NIST 800-53 controls
+    value: MSR
+- id: ex01
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq1 == 'yes'
+    value: ~
+- id: ex01_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq1 == 'yes'
+    value: ~
+  ask-first:
+  - ex01
+- id: mrq2
+  title: (MSR02) Product shall support user/role privilege levels that restrict user/role 
+    permissions to the minimum required to perform necessary defined functions.
+  prompt: Does the product support user/role privilege levels that restrict user/role
+    permissions to the minimum required to perform necessary defined functions?
+
+    Each user account is unique and changeable. All accounts are manageable by RBAC 
+    (Role Based Access Controls) and only given minimum permissions to perform their roles. 
+
+    In Role-Based Access Control (RBAC), access decisions are based on an individual's roles 
+    and responsibilities within the organization or user base. The process of defining roles 
+    is usually based on analyzing the fundamental goals and structure of an organization and 
+    is usually linked to the security policy. For instance, in a medical organization, the 
+    different roles of users may include those such as a doctor, nurse, attendant, patients, 
+    etc. Obviously, these members require different levels of access in order to perform their 
+    functions, but also the types of web transactions and their allowed context vary greatly 
+    depending on the security policy and any relevant regulations (HIPAA, Gramm-Leach-Bliley, etc.).
+    An RBAC access control framework should provide web application security administrators with 
+    the ability to determine who can perform what actions, when, from where, in what order, and 
+    in some cases under what relational circumstances.
+
+    https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html
+
+    Related NIST Controls- AC-1, AC-2, AC-2(7), AC-3, AC-3(7), AC-6, AC-17
+
+  type: yesno
+- id: ex02
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq2 == 'yes'
+    value: ~
+- id: ex02_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: rmrq2 == 'yes'
+    value: ~
+  ask-first:
+  - ex02
+- id: mrq3
+  title: (MSR03) Product shall encrypt all PII, PHI, and sensitive data (including 
+    authentication credentials) at rest using FIPS 140-3 compliant Level 1 or better 
+    encryption algorithms.
+  prompt: Does the product encrypt all PII, PHI, and sensitive data (including authentication
+    credentials) at rest using FIPS 140-3 compliant Level 1 or better encryption?
+
+    All sensitive data such as PII or PHI should be encrypted at rest and in transit.
+
+    Related NIST Controls- SC-12(2), SC-12(3), SC-13, SC-28, SC-28(1)
+  type: yesno
+- id: ex03
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq3 == 'yes'
+    value: ~
+- id: ex03_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq3 == 'yes'
+    value: ~
+  ask-first:
+  - ex03
+- id: mrq4
+  title: (MSR04) Product shall encrypt all PII, PHI, and other sensitive 
+    data (including authentication credentials) in transit by default using FIPS 140-3 
+    compliant Level 1 or higher standards for ciphers and key sizes.
+  prompt: Does the product encrypt all PII, PHI, and other sensitive data (including
+    authentication credentials) in transit using FIPS 140-3 compliant Level 1 or higher
+    standards for ciphers and key sizes?
+
+    When correctly implemented, TLS can provide a number of security benefits;
+
+    Confidentiality - protection against an attacker from reading the contents of traffic.
+    Integrity - protection against an attacker modifying traffic.
+    Replay prevention - protection against an attacker replaying requests against the server.
+    Authentication - allowing the client to verify that they are connected to the real server (note that the identity of the client is not verified unless client certificates are used).
+    TLS is used by many other protocols to provide encryption and integrity and can be used in a number of different ways. 
+
+    https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html
+
+    All PII, PHI, and other sensitive data (including authentication credentials) is encrypted in 
+    transit using industry-standard cryptography (e.g., TLS) that meets FIPS 140-3 compliant level 
+    1 or higher standards for ciphers and key sizes.
+
+    Related NIST Controls- SC-8, SC-8(1), SC-8(2), SC-12(2), SC-12(3), SC-13, IA-3(1)
+  type: yesno
+- id: ex04
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq4 == 'yes'
+    value: ~
+- id: ex04_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq4 == 'yes'
+    value: ~
+  ask-first:
+  - ex04
+- id: mrq5
+  title: Secure Wipe
+  prompt: Does the product provide the capability to securely remove all PHI, PII,
+    and other sensitive data on demand, such that, at a minimum, the cryptographic
+    key for encrypted data is destroyed, or all data is overwritten with at least
+    one pass of all 1s or all 0s?
+  type: yesno
+- id: ex05
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq5 == 'yes'
+    value: ~
+- id: ex05_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq5 == 'yes'
+    value: ~
+  ask-first:
+  - ex05
+- id: mrq6
+  title: Product Hardening
+  prompt: Is the product hardened (all unneeded ports, software, and services are
+    removed and/or disabled by default)?
+  type: yesno
+- id: ex06
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq6 == 'yes'
+    value: ~
+- id: ex06_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq6 == 'yes'
+    value: ~
+  ask-first:
+  - ex06
+- id: mrq7
+  title: Malicious Software Protections
+  prompt: Does the product include protection from malicious software (e.g., anti-virus,
+    application whitelisting)?
+  type: yesno
+- id: ex07
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq7 == 'yes'
+    value: ~
+- id: ex07_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq7 == 'yes'
+    value: ~
+  ask-first:
+  - ex07
+- id: mrq8
+  title: Audit Logging
+  prompt: Does the product provide audit logging capability for both clinical/application
+    and system events?
+  type: yesno
+  actions:
+  - action: element/add_role/MSR
+    comment: >-
+      Adding minimum security requirement NIST 800-53 rev. 5 controls to the product control
+      catalog.
+    value: 'no'
+  - action: element/add_role/MSR
+    comment: >-
+      Adding minimum security requirement NIST 800-53 rev. 5 controls to the product control
+      catalog.
+    value: 'yes'
+- id: q0
+  title: New Question Title
+  prompt: Exception is needed
+  type: interstitial
+- id: ex08
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq8 == 'yes'
+    value: ~
+- id: ex08_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq8 == 'yes'
+    value: ~
+  ask-first:
+  - ex08
