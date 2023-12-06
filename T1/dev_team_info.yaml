@@ -2,21 +2,6 @@ id: dev_team_info
 title: Information about the Product Core Team
 output: []
 questions:
-- id: mod1_intro
-  title:
-  prompt: Hologic recognizes customer expectations and patient rights regarding privacy & security of sensitive
-information both within the healthcare provider environment and in the conduct of Hologic business
-activities. This workflow tool will walk you through the steps that enable engineering activities to support privacy &
-security requirements for healthcare providers and patients. Hologic\'s Privacy Principles encompass
-concepts and requirements that come from customers, broad regulatory requirements, international
-privacy standards and practices, and other sources.
-
-Hologic\'s products and services are deployed globally and thus Hologic, and their customers, are subject
-to a myriad of regulations related to privacy, as well as security. The Hologic Secure Product Design and
-Lifecycle Procedure provides the necessary steps to incorporate privacy & security into Hologic
-engineering activities, while addressing interest in security by the FDA, GDPR and other regulatory
-bodies.
-  type: interstitial
 - id: rd_team
   title: Product R&D Division
   prompt: What R&D engineering division is this product in?
@@ -109,7 +94,3 @@ bodies.
   title: Launch Date  
   prompt: When is this product expected date for the product ship?
   type: date
-- id: update_dojo
-  title: Update Watchtower Platform
-  prompt: {{ create_dojo_product({{prod_name}}, {{prod_desc}}, 2) }}
-  type: interstitial
