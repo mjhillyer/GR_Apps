@@ -1,7 +1,7 @@
 id: app
-title: Updated Secure By Design
+title: SBD 4.0
 type: project
-version: 1.1
+version: 1.2
 icon: app.png
 introduction:
   format: markdown
@@ -20,7 +20,7 @@ catalog:
       ====================================
 
       Provides Secure Product Design Program to enable a Secure by Design methodology.
-  version: '1.1'
+  version: '1.2'
 questions:
 - id: dev_team_info
   title: Product Information
