@@ -1,7 +1,7 @@
 id: app
 title: SBD 4.0
 type: project
-version: 1.0
+version: 1.1
 icon: app.png
 introduction:
   format: markdown
@@ -20,10 +20,15 @@ catalog:
       ====================================
 
       Provides Secure Product Design Program to enable a Secure by Design methodology.
-  version: '1.0'
+  version: '1.1'
 questions:
 - id: dev_team_info
   title: Product Information
   type: module
   module-id: dev_team_info
-
+  group: sbd
+- id: min_requirements
+  title: Hologic Product Minimum Security Requirements Assessment
+  type: module
+  module-id: min_requirements
+  group: sbd
