@@ -1,0 +1,318 @@
+id: module_10
+title: Module 10
+output:
+- id: artifact_1
+  format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+- id: ssp_v1
+  title: SSP
+  format: markdown
+  filename: templates/ssp_v1.md
+  template: "<!DOCTYPE html><meta charset=\"UTF-8\">\r\n<style type=\"text/css\" scoped>\r\nbody
+    { font-family: serif; }\r\np {font-family: serif; }\r\nh1 { font-size:1.5em; color:#000000;
+    font-family: sans-serif; margin-top: 3em; margin-bottom: 3em;}\r\nh2 { font-size:1.4em;
+    border-bottom:1px solid #000000; margin-top: 3em; color: #000000; font-family:
+    sans-serif;}\r\nh3 { font-size:1.3em; border-bottom: 0.5px solid #000000; color:
+    #000000; font-weight: bold; margin-top: 2em; font-family: sans-serif;}\r\nh4 {
+    font-size:1.2em; font-weight: bold; color: #000000; font-family: sans-serif;}\r\nh6
+    { display:none;}\r\ntable { border: 1px solid #000000; border-collapse: collapse;
+    width:85%; margin-left:auto; margin-right:auto; margin-top:1em; margin-bottom:4em;
+    font-size:.9em; font-family: sans-serif;}\r\ntr {page-break-inside:avoid; page-break-after:auto;}\r\nth
+    { padding:1em; border:1px solid #000000; page-break-inside:avoid; page-break-after:auto;
+    background: #F2F2F2;}\r\ntd { padding:1em; border:1px solid #000000; page-break-inside:avoid;
+    page-break-after:auto;}\r\n.th-header, thead {font-size:.9em; padding:.5em; background-color:#F2F2F2;
+    }\r\n.table-caption { font-size:.9em; font-family:sans-serif; padding-top: 1.5em;}\r\n.bold
+    { font-style:bold; font-weight:300; }\r\n.box-w-border { border:1px solid #000000;
+    padding:.5em; display:block; width:85%; margin-left:auto; margin-right:auto; margin-top:2em;
+    margin-bottom:2em;}\r\n.disclaimer p { text-align:center; font-family:sans-serif;
+    font-size:1em; }\r\n@media print { h2 { font-size: 1.3em; } }\r\n</style>\r\n<body>\r\n<!--
+    System Information -->\r\n\r\n<span style=\"margin-left:auto; margin-right:auto;
+    display:table; text-align:center; font-size:2.5em; font-family: sans-serif; \">SSP:
+    {{project.system_info.system_name}}</span>\r\n<br />\r\n<span style=\"margin-left:auto;
+    margin-right:auto; display:table; text-align:center; font-size:1.5em; font-family:
+    sans-serif;\">LIMITED OFFICIAL USE</span>\r\n\r\n<table>\r\n<tbody><tr><td>\r\n<p
+    style=\"font-size:1em;\">This document contains Sensitive Material\r\nand is exempted
+    from release under the Freedom of Information Act\r\nby Exemption b(2).</p>\r\n<p>Staff
+    reviewing this document must hold a minimum of Public Trust\r\nLevel 1c clearance.</p>\r\n</td></tr>\r\n</tbody></table>\r\n\r\n<div
+    style=\"page-break-after: always;\">\r\n\t<h6>&nbsp;</h6>\r\n</div>\r\n\r\n<section>\r\n<h2>1.
+    System Information</h2>\r\n\r\n{{project.system_info.output_documents.system_info}}\r\n\r\n<!--
+    /System Information -->\r\n</section>\r\n\r\n<section>\r\n<h2>1.  INFORMATION
+    SYSTEM NAME/TITLE</h2>\r\n\r\nThis System Security Plan provides an overview of
+    the security requirements for the Information System Name (Enter Information System
+    Abbreviation) and describes the controls in place or planned for implementation
+    to provide a level of security appropriate for the information to be transmitted,
+    processed or stored by the system.  Information security is vital to our critical
+    infrastructure and its effective performance and protection is a key component
+    of our national security program.  Proper management of information technology
+    systems is essential to ensure the confidentiality, integrity and availability
+    of the data transmitted, processed or stored by the Enter Information System Abbreviation
+    information system.\r\n\r\nThe security safeguards implemented for the Enter Information
+    System Abbreviation system meet the policy and control requirements set forth
+    in this System Security Plan.  All systems are subject to monitoring consistent
+    with applicable laws, regulations, agency policies, procedures and practices.\r\n\r\n<span
+    class=\"table-caption\">Table 1-1. Information System Name and Title</div>\r\n\r\n<!--
+    Information System Table goes -->\r\n<table>\r\n    <tr>\r\n      <th>Unique Identifier</th>\r\n
+    \     <th>Information System Name</th>\r\n      <th>Information System Abbreviation</th>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td>{{project.fisma_level.application_number}}</td>\r\n
+    \     <td>{{project.system_info.system_name}}</td>\r\n      <td>{{project.system_info.system_short_name}}</td>\r\n
+    \   </tr>\r\n</table>\r\n</section>\r\n<section>\r\n<h2>2.  INFORMATION SYSTEM
+    CATEGORIZATION</h2>\r\n\r\nThe overall information system sensitivity categorization
+    is recorded in Table 2 1. Security Categorization that follows.  Directions for
+    attaching the FIPS 199 document may be found in the following section: Attachment
+    10, FIPS 199.\r\n\r\n<span class=\"table-caption\">Table 2-1. Security Categorization</div>\r\n\r\n<!--
+    security categorization table goes here -->\r\n<table>\r\n    <tr><th>System Sensitivity
+    Level</th></tr>\r\n    <tr><td>{{project.fisma_level.fisma_level}}</td></tr>\r\n</table>\r\n\r\n</section>\r\n\r\n<section>\r\n<h3>2.1
+    Information Types</h3>\r\n\r\nThis section describes how the information types
+    used by the information system are categorized for confidentiality, integrity
+    and availability sensitivity levels.\r\n\r\nThe following tables identify the
+    information types that are input, stored, processed and/or output from Enter Information
+    System Abbreviation.  The selection of the information types is based on guidance
+    provided by Office of Management and Budget (OMB) Federal Enterprise Architecture
+    Program Management Office Business Reference Model 2.0 and FIPS Pub 199, Standards
+    for Security Categorization of Federal Information and Information Systems which
+    is based on NIST Special Publication (SP) 800-60, Guide for Mapping Types of Information
+    and Information Systems to Security Categories.\r\n\r\nThe tables also identify
+    the security impact levels for confidentiality, integrity and availability for
+    each of the information types expressed as low, moderate, or high.  The security
+    impact levels are based on the potential impact definitions for each of the security
+    objectives (i.e., confidentiality, integrity and availability) discussed in NIST
+    SP 800-60 and FIPS Pub 199.\r\n\r\nThe potential impact is low if—\r\n\r\n* The
+    loss of confidentiality, integrity, or availability could be expected to have
+    a limited adverse effect on organizational operations, organizational assets,
+    or individuals.\r\n* A limited adverse effect means that, for example, the loss
+    of confidentiality, integrity, or availability might: (i) cause a degradation
+    in mission capability to an extent and duration that the organization is able
+    to perform its primary functions, but the effectiveness of the functions is noticeably
+    reduced; (ii) result in minor damage to organizational assets; (iii) result in
+    minor financial loss; or (iv) result in minor harm to individuals.\r\n\r\nThe
+    potential impact is moderate if—\r\n\r\n* The loss of confidentiality, integrity,
+    or availability could be expected to have a serious adverse effect on organizational
+    operations, organizational assets, or individuals.\r\n* A serious adverse effect
+    means that, for example, the loss of confidentiality, integrity, or availability
+    might: (i) cause a significant degradation in mission capability to an extent
+    and duration that the organization is able to perform its primary functions, but
+    the effectiveness of the functions is significantly reduced; (ii) result in significant
+    damage to organizational assets; (iii) result in significant financial loss; or
+    (iv) result in significant harm to individuals that does not involve loss of life
+    or serious life threatening injuries.\r\n\r\nThe potential impact is high if—\r\n\r\n*
+    The loss of confidentiality, integrity, or availability could be expected to have
+    a severe or catastrophic adverse effect on organizational operations, organizational
+    assets, or individuals.\r\n* A severe or catastrophic adverse effect means that,
+    for example, the loss of confidentiality, integrity, or availability might: (i)
+    cause a severe degradation in or loss of mission capability to an extent and duration
+    that the organization is not able to perform one or more of its primary functions;
+    (ii) result in major damage to organizational assets; (iii) result in major financial
+    loss; or (iv) result in severe or catastrophic harm to individuals involving loss
+    of life or serious life threatening injuries.\r\n\r\n<span class=\"table-caption\">Table
+    2-2. Sensitivity Categorization of Information Types</span>\r\n<!-- Sensitivity
+    Categorization of Information Types Table goes -->\r\n{{project.technical_information.info_type_table_01}}\r\n</section>\r\n<section>\r\n<h2>2.2
+    Security Objectives Categorization</h2>\r\n\r\nBased on the information provided
+    in Table 2 2. Sensitivity Categorization of Information Types, for the Enter Information
+    System Abbreviation, default to the high-water mark for the Information Types
+    as identified in Table 2 3. Security Impact Level below.\r\n\r\n<span class=\"table-caption\">Table
+    2-3. Security Impact Level</span>\r\n\r\n{{project.technical_information.security_impact_level}}\r\n\r\nThrough
+    review and analysis, it has been determined that the baseline security categorization
+    for the Enter Information System Abbreviation system is listed in the Table 2
+    4. Baseline Security Configuration that follows.\r\n\r\n<span class=\"table-caption\">Table
+    2-4. Baseline Security Configuration</div>\r\n\r\n<!-- Security Impact Level Table
+    goes here -->\r\n<table>\r\n    <tr>\r\n      <td class=\"td-row-title\">Information
+    System Abbreviation Security Categorization</td>\r\n      <td>[[LOW_MODERATE_HIGH]]</td>\r\n
+    \   </tr>\r\n</table>\r\n\r\nUsing this categorization, in conjunction with the
+    risk assessment and any unique security requirements, we have established the
+    security controls for this system, as detailed in this SSP.\r\n\r\n</section>\r\n\r\n<section>\r\n<h2>3.
+    \ INFORMATION SYSTEM OWNER</h2>\r\n\r\nThe following individual is identified
+    as the system owner or functional proponent/advocate for this system.\r\n\r\n<span
+    class=\"table-caption\">Table 3-1. Information System Owner</div>\r\n\r\n<table
+    >\r\n    <tr>\r\n      <th>Information System Owner Information</th><th></th>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Name</td>\r\n      <td>{{project.system_info.system_owner}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Title</td>\r\n      <td>{{project.system_info_poc.system_owner_title}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Company / Organization</td>\r\n
+    \     <td>{{project.system_info.system_org}}</td>\r\n    </tr>\r\n    <tr>\r\n
+    \     <td class=\"td-row-title\">Phone Number</td>\r\n      <td>{{project.system_info_poc.system_owner_phone}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Email Address</td>\r\n
+    \     <td>{{project.system_info_poc.system_owner_email}}</td>\r\n    </tr>\r\n
+    \   <tr>\r\n      <td class=\"td-row-title\">Address</td>\r\n      <td>{{project.system_info_poc.system_owner_address}}</td>\r\n
+    \   </tr>\r\n</table>\r\n</section>\r\n<section>\r\n<h2>4.  AUTHORIZING OFFICIAL</h2>\r\n\r\nThe
+    Authorizing Official (AO) or Designated Approving Authority (DAA) for this information
+    system is:\r\n\r\n<span class=\"table-caption\">Table 4-1. Information System
+    Authorizing Official</div>\r\n\r\n<table >\r\n    <tr>\r\n      <th>Information
+    System Authorizing Official</th><th></th>\r\n    </tr>\r\n    <tr>\r\n      <td
+    class=\"td-row-title\">Name</td>\r\n      <td>{{project.system_info_poc.system_ao_name}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Title</td>\r\n      <td>{{project.system_info_poc.system_ao_title}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Company / Organization</td>\r\n
+    \     <td>{{project.system_info_poc.system_ao_org}}</td>\r\n    </tr>\r\n    <tr>\r\n
+    \     <td class=\"td-row-title\">Phone Number</td>\r\n      <td>{{project.system_info_poc.system_ao_phone}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Email Address</td>\r\n
+    \     <td>{{project.system_info_poc.system_ao_email}}</td>\r\n    </tr>\r\n    <tr>\r\n
+    \     <td class=\"td-row-title\">Address</td>\r\n      <td>{{project.system_info_poc.system_ao_address}}</td>\r\n
+    \   </tr>\r\n</table>\r\n</section>\r\n<section>\r\n<h2>5.  OTHER DESIGNATED CONTACTS</h2>\r\n\r\n<span
+    class=\"table-caption\">Table 5-1. Information System Management Point of Contact</div>\r\n\r\n<table
+    >\r\n    <tr>\r\n      <th>Information System Management Point of Contact</th><th></th>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Name</td>\r\n      <td>{{project.system_info.system_pm}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Title</td>\r\n      <td>{{project.system_info_poc.system_manager_title}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Company / Organization</td>\r\n
+    \     <td>{{project.system_info.system_org}}</td>\r\n    </tr>\r\n    <tr>\r\n
+    \     <td class=\"td-row-title\">Phone Number</td>\r\n      <td>{{project.system_info_poc.system_manager_phone}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Email Address</td>\r\n
+    \     <td>{{project.system_info_poc.system_manager_email}}</td>\r\n    </tr>\r\n
+    \   <tr>\r\n      <td class=\"td-row-title\">Address</td>\r\n      <td>{{project.system_info_poc.system_manager_address}}</td>\r\n
+    \   </tr>\r\n</table>\r\n\r\n<span class=\"table-caption\">Table 5-2. Information
+    System Technical Point of Contact</div>\r\n\r\n<table>\r\n    <tr>\r\n      <th>Information
+    System Technical Point of Contact</th><th></th>\r\n    </tr>\r\n    <tr>\r\n      <td
+    class=\"td-row-title\">Name</td>\r\n      <td>{{project.system_info_poc.system_tech_name}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Title</td>\r\n      <td>{{project.system_info_poc.system_tech_title}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Company / Organization</td>\r\n
+    \     <td>{{project.system_info.system_admin_team}}</td>\r\n    </tr>\r\n    <tr>\r\n
+    \     <td class=\"td-row-title\">Phone Number</td>\r\n      <td>{{project.system_info_poc.system_tech_phone}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Email Address</td>\r\n
+    \     <td>{{project.system_info_poc.system_tech_email}}</td>\r\n    </tr>\r\n
+    \   <tr>\r\n      <td class=\"td-row-title\">Address</td>\r\n      <td>{{project.system_info_poc.system_tech_address}}</td>\r\n
+    \   </tr>\r\n</table>\r\n</section>\r\n<section>\r\n<h2>6.  ASSIGNMENT OF SECURITY
+    RESPONSIBILITY</h2>\r\n\r\n<span class=\"table-caption\">Table 6-1. CSP name Internal
+    ISSO (or Equivalent) Point of Contact</div>\r\n\r\n<table >\r\n    <tr>\r\n      <th>CSP
+    name Internal ISSO (or Equivalent) Point of Contact</th><th></th>\r\n    </tr>\r\n
+    \   <tr>\r\n      <td class=\"td-row-title\">Name</td>\r\n      <td>{{project.system_info_poc.system_security_name}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Title</td>\r\n      <td>{{project.system_info_poc.system_security_title}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Company / Organization</td>\r\n
+    \     <td>{{project.system_info_poc.system_security_org}}</td>\r\n    </tr>\r\n
+    \   <tr>\r\n      <td class=\"td-row-title\">Phone Number</td>\r\n      <td>{{project.system_info_poc.system_security_phone}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Email Address</td>\r\n
+    \     <td>{{project.system_info_poc.system_security_email}}</td>\r\n    </tr>\r\n
+    \   <tr>\r\n      <td class=\"td-row-title\">Address</td>\r\n      <td>{{project.system_info_poc.system_security_address}}</td>\r\n
+    \   </tr>\r\n</table>\r\n\r\n\r\n<span class=\"table-caption\">Table 6-2. AO Point
+    of Contact</div>\r\n\r\n<table >\r\n    <tr>\r\n      <th>AO Point of Contact</th><th></th>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Name</td>\r\n      <td>{{project.system_info_poc.system_ao_poc_name}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Title</td>\r\n      <td>{{project.system_info_poc.system_ao_poc_title}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Company / Organization</td>\r\n
+    \     <td>{{project.system_info_poc.system_ao_poc_org}}</td>\r\n    </tr>\r\n
+    \   <tr>\r\n      <td class=\"td-row-title\">Phone Number</td>\r\n      <td>{{project.system_info_poc.system_ao_poc_phone}}</td>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td class=\"td-row-title\">Email Address</td>\r\n
+    \     <td>{{project.system_info_poc.system_ao_poc_email}}</td>\r\n    </tr>\r\n
+    \   <tr>\r\n      <td class=\"td-row-title\">Address</td>\r\n      <td>{{project.system_info_poc.system_ao_poc_address}}</td>\r\n
+    \   </tr>\r\n</table>\r\n</section>\r\n<section>\r\n<h2>7.  INFORMATION SYSTEM
+    OPERATIONAL STATUS</h2>\r\n\r\nThe system is currently in the life-cycle phase
+    shown in Table 7 1. System Status that follows.  (Only operational systems can
+    be granted an ATO).\r\n\r\n<span class=\"table-caption\">Table 7-1. System Status</div>\r\n\r\n<table>\r\n
+    \   <tr>\r\n      <th>System Status</th>\r\n    </tr>\r\n    <tr>\r\n      <td>{{
+    project.system_info_technical.system_status.text }}</td>\r\n    </tr>\r\n</table>\r\n</section>\r\n<section>\r\n<h2>8.
+    \ INFORMATION SYSTEM TYPE</h2>\r\n\r\nInformation systems, particularly those
+    based on cloud architecture models, are made up of different service layers.  Below
+    are some questions that help the system owner determine if their system is a cloud
+    followed by specific questions to help the system owner determine the type of
+    cloud.\r\n\r\n<span class=\"table-caption\">Table 8-1. Service Layers Represented
+    in this SSP</div>\r\n\r\n<table >\r\n    <tr>\r\n      <th>System Status</th>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td>{{project.system_info_technical.cloud_service_model.text}}\r\n
+    \     {% if project.system_info_technical.cloud_service_model == \"other\" %}\r\n
+    \   {{project.system_info_technical.cloud_service_model_other.text}}{% endif %}
+    </td>\r\n    </tr>\r\n</table>\r\n\r\nNote: Refer to NIST SP 800-145 for information
+    on cloud computing architecture models.\r\n</section>\r\n<section>\r\n<h3>8.2.
+    \ Cloud Deployment Models</h3>\r\n\r\nInformation systems are made up of different
+    deployment models.  The deployment models of the Enter Information System Abbreviation
+    that are defined in this SSP and are not leveraged by any other FedRAMP Authorizations,
+    are indicated in Table 8 2. Cloud Deployment Model Represented in this SSP that
+    follows.\r\n\r\n<span class=\"table-caption\">Table 8-2. Cloud Deployment Model
+    Represented in this SSP</div>\r\n\r\n<table>\r\n    <tr>\r\n      <th>System Status</th>\r\n
+    \   </tr>\r\n    <tr>\r\n      <td>{{project.system_info_technical.cloud_model.text}}\r\n
+    \     {% if project.system_info_technical.cloud_model == \"hybrid\" %} {{project.system_info_technical.choice_hybrid.text}}{%
+    endif %} </td>\r\n    </tr>\r\n</table>\r\n</section>\r\n<section>\r\n<h3>8.3.
+    Leveraged Authorizations</h3>\r\n\r\nThe {{project.system_info.system_name}} Choose
+    an item leverages a pre-existing FedRAMP Authorization.  FedRAMP Authorizations
+    leveraged by this Enter Information System Abbreviation are listed in Table 8
+    3. Leveraged Authorizations that follows.\r\n\r\n<span class=\"table-caption\">Table
+    8-3. Leveraged Authorizations</div>\r\n\r\n{{project.system_info_technical.leveraged_authorizations}}\r\n</section>\r\n<section>\r\n<h2>9.
+    \ GENERAL SYSTEM DESCRIPTION</h2>\r\n</section>\r\n<section>\r\n<h3>9.1.  System
+    Function or Purpose</h3>\r\n</section>\r\n<section>\r\n{{project.system_info.system_description}}\r\n</section>\r\n<section>\r\n<h3>9.2.
+    \ Information System Components and Boundaries</h3>\r\n\r\n[[TBD]]\r\n\r\nA detailed
+    and explicit definition of the system authorization boundary diagram is represented
+    in Figure 9-1. Authorization Boundary Diagram below.\r\n\r\n</section>\r\n<section>\r\n<h3>9.3.
+    \ Types of Users</h3>\r\n\r\nAll personnel have their status categorized with
+    a sensitivity level in accordance with PS-2.  Personnel (employees or contractors)
+    of service providers are considered Internal Users.  All other users are considered
+    External Users.  User privileges (authorization permission after authentication
+    takes place) are described in Table 9 1. Personnel Roles and Privileges that follows.\r\n\r\n<span
+    class=\"table-caption\">Table 9-1. Personnel Roles and Privileges</div>\r\n\r\n{{project.system_info_technical.security_impact_users}}\r\n</section>\r\n<section>\r\n<h3>9.4.
+    \ Network Architecture</h3>\r\n\r\nThe logical network topology is shown in Figure
+    9 2. Network Diagram mapping the data flow between components.\r\n\r\nThe following
+    Figure 9 2. Network Diagram(s) provides a visual depiction of the system network
+    components that constitute Enter Information System Abbreviation.\r\n</section>\r\n<section>\r\n<h2>10.
+    SYSTEM ENVIRONMENT AND INVENTORY</h2>\r\nDirections for attaching the FedRAMP
+    Inventory Workbook may be found in the following section: Attachment 13, FedRAMP
+    Inventory Workbook.\r\n</section>\r\n<section>\r\n<h3>10.1. Data Flow</h3>\r\nThe
+    data flow in and out of the system boundaries is represented in Figure 10 1. Data
+    Flow Diagram below.\r\n</section>\r\n<section>\r\n<h3>10.2. Ports, Protocols and
+    Services</h3>\r\n\r\nThe Table 10 1. Ports, Protocols and Services below lists
+    the ports, protocols and services enabled in this information system.\r\n\r\n<span
+    class=\"table-caption\">Table 10-1. Ports, Protocols and Services</div>\r\n\r\n{{project.system_info_technical.ports_protocols_services}}\r\n</section>\r\n<section>\r\n<h3>11.
+    SYSTEM INTERCONNECTIONS</h3>\r\n\r\n<span class=\"table-caption\">Table 11-1.
+    System Interconnections</div>\r\n\r\n{{project.system_info_technical.system_interconnections}}\r\n\r\n</section>\r\n<section>\r\n<h2>12.
+    LAWS, REGULATIONS, STANDARDS AND GUIDANCE</h2>\r\nA summary of FedRAMP Laws and
+    Regulations is included in Attachment 12, FedRAMP Laws and Regulations.\r\n</section>\r\n<section>\r\n<h3>12.1.
+    Applicable Laws and Regulations</h3>\r\nThe FedRAMP Laws and Regulations can be
+    found on this web page: Templates.\r\nTable 12 1. Information System Name Laws
+    and Regulations includes additional laws and regulations specific to Information
+    System Name.\r\n\r\n<span class=\"table-caption\">Table 12-1. Information System
+    Name Laws and Regulations</div>\r\n\r\n{{project.system_info_technical.laws_regulations}}\r\n</section>\r\n<section>\r\n<h3>12.2.
+    Applicable Standards and Guidance</h3>\r\nThe FedRAMP Standards and Guidance be
+    found on this web page: Templates\r\nTable 12 2. Information System Name Standards
+    and Guidance includes in this section any additional standards and guidance specific
+    to Information System Name.\r\n\r\n<span class=\"table-caption\">Table 12-2. Information
+    System Name Standards and Guidance</div>\r\n\r\n{{project.system_info_technical.standards_guidance}}\r\n\r\n\r\n\r\n<!--
+    Testing links -->\r\n<a id=\"controls\" name=\"controls\"></a>\r\n\r\n</section>\r\n<section>\r\n<h2>13.
+    MINIMUM SECURITY CONTROLS</h2>\r\n\r\nSecurity controls must meet minimum security
+    control baseline requirements.  Upon categorizing a system as Low, Moderate, or
+    High sensitivity in accordance with FIPS 199, the corresponding security control
+    baseline standards apply.  Some of the control baselines have enhanced controls
+    which are indicated in parentheses.\r\n\r\nSecurity controls that are representative
+    of the sensitivity of Enter Information System Abbreviation are described in the
+    sections that follow.  Security controls that are designated as “Not Selected”
+    or “Withdrawn by NIST” are not described unless they have additional FedRAMP controls.
+    \ Guidance on how to describe the implemented standard can be found in NIST 800-53,
+    Rev 4.  Control enhancements are marked in parentheses in the sensitivity columns.\r\n\r\nSystems
+    that are categorized as FIPS 199 Low use the controls designated as Low, systems
+    categorized as FIPS 199 Moderate use the controls designated as Moderate and systems
+    categorized as FIPS 199 High use the controls designated as High.\r\n\r\n<!--Control
+    catalog here-->\r\n\r\n{% set meta = {\"current_family_title\": \"\", \"current_control\":
+    \"\", \"current_control_part\": \"\", \"control_count\": 0, \"current_parts\":
+    []} %}\r\n\r\n{% for control in system.root_element.selected_controls_oscal_ctl_ids
+    %}\r\n  {% set var_ignore = meta.update({\"control_count\": meta['control_count']
+    + 1}) %}\r\n\r\n  {% if meta['current_family_title'] != control_catalog[control.lower()]['family_title']
+    %}\r\n    {# When current current control family changes print the new control
+    family and update the current control family #}\r\n    <h2>{{control_catalog[control.lower()]['family_id']|upper}}
+    - {{control_catalog[control.lower()]['family_title']}}</h2>\r\n    {% set var_ignore
+    = meta.update({\"current_family_title\": control_catalog[control.lower()]['family_title']})
+    %}\r\n  {% endif %}\r\n  <div>\r\n    {% if control.lower() in control_catalog
+    %}\r\n    <div>{{control|upper}} - {{control_catalog[control.lower()]['title']}}</div>\r\n
+    \   <div style=\"white-space: pre-wrap;\">{{control_catalog[control.lower()]['description']}}</div>\r\n
+    \   <div>\r\n      <h4>What is the solution and how is it implemented?</h4>\r\n
+    \       {% if control in system.control_implementation_as_dict %}\r\n          <div
+    style=\"white-space: pre-line; word-break: keep-all;\">{{ system.control_implementation_as_dict[control]['combined_smt']|safe
+    }}</div>\r\n        {% else %}\r\n          <div style=\"white-space: pre-line;
+    word-break: keep-all;\">No statement available.</div>\r\n        {% endif %}\r\n
+    \   </div>\r\n    {% endif %}\r\n  </div>\r\n{% endfor %}\r\n\r\n{% if system.root_element.selected_controls_oscal_ctl_ids|length
+    == 0 %}\r\n<i>Control requirements have not yet been assigned to this system.</i>\r\n{%
+    endif %}\r\n\r\n</section>\r\n<section>\r\n<!-- /13. MINIMUM SECURITY CONTROLS
+    -->"
+questions:
+- id: q1
+  title: System Security Plan
+  prompt: |-
+    Draft System Security Plan
+
+    A System Security Plan provides a detailed description of your product and how you are providing controls on the product.
+
+    We've prepared a draft System Security Plan based on what you've told us about your product.
+  type: interstitial
+  choices:
+  - key: startrek
+    text: Star Trek
+  - key: starwars
+    text: Star Wars
+  - key: lordoftherings
+    text: Lord of the Rings
+  - key: other
+    text: Other
+- id: q0
+  type: text
+  title: New Question Title
+  prompt: Enter some text.

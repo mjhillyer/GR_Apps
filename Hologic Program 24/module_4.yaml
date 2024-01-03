@@ -1,0 +1,148 @@
+id: module_4
+title: Module 4
+output:
+- id: artifact_1
+  format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+questions:
+- id: q1
+  title: PII/PHI
+  prompt: "IMPORTANT: Does the IT System collect, store, or process Personally Identifiable
+    Information (PII) or Personal Health Information? \n\nDoes this app collect any
+    “Personally Identifiable Information” (PII)?\n“Personally identifiable information”
+    means any information that permits the identity of an individual to be directly
+    or indirectly inferred, including any other information which is linked or linkable
+    to that individual, regardless of whether the individual is a U.S. citizen, lawful
+    permanent resident, visitor to the U.S., or employee or contractor to the Department."
+  type: interstitial
+  choices:
+  - key: startrek
+    text: Star Trek
+  - key: starwars
+    text: Star Wars
+  - key: lordoftherings
+    text: Lord of the Rings
+  - key: other
+    text: Other
+- id: q19
+  title: Maintain PII/PHI
+  prompt: "Does the IT System collect, store, or process Personally Identifiable Information
+    (PII) or Personal Health Information? \n\nAnswer \"Yes\" if the product collects,
+    stores, or processes Personally Identifiable Information (PII) or Personal Health
+    Information (PHI) about individuals. \n\nAnswer \"No\" if the system contains
+    only publicly available information and no information about individuals."
+  type: yesno
+- id: q18
+  title: Describe how data is used.
+  prompt: "Let's assess how your product uses and safeguards data.\n\nDescribe the
+    data your product collects, stores, or processes. \nDescribe in general terms
+    the data that the product handles. \nSummarize why the information is being collected
+    or processed. Be sure to summarize what kind of personal data the system collects
+    and why."
+  type: longtext
+- id: q0
+  title: PHI / PII In volatile memory.
+  prompt: |-
+    Does the product maintain personally identifiable information temporarily
+        in volatile memory (i.e., until cleared by power-off or reset)?
+  type: yesno
+- id: q2
+  title: PHI / PII on internal storage
+  prompt: |-
+    Does the product store personally identifiable information persistently
+        on internal storage media?
+  type: yesno
+- id: q3
+  title: PHI / PII Preservation
+  prompt: |-
+    Is personally identifiable information preserved in the product's non-volatile
+        memory until explicitly erased?
+  type: yesno
+- id: q4
+  title: PHI / PII in Database
+  prompt: Does the device store personally identifiable information in a database?
+  type: yesno
+- id: q5
+  title: PHI / PII Automatic Purge
+  prompt: >-
+    Does the device allow configuration to automatically delete local personally
+        identifiable information after it is stored to a long term solution?
+  type: yesno
+- id: q6
+  title: Sharing of PHI / PII Data
+  prompt: |-
+    Does the device import/export personally identifiable information with other
+        systems (e.g., a wearable monitoring device might export personally identifiable
+        information to a server)?
+  type: yesno
+- id: q7
+  title: New Question Title
+  prompt: |-
+    Does the device maintain personally identifiable information when powered
+        off, or during power service interruptions?
+  type: yesno
+- id: q8
+  title: New Question Title
+  prompt: |-
+    Does the device allow the internal media to be removed by a service technician
+        (e.g., for separate destruction or customer retention)?
+  type: yesno
+- id: q9
+  title: New Question Title
+  prompt: |-
+    Does the device generate hardcopy reports or images containing personally
+        identifiable information?
+  type: yesno
+- id: q10
+  title: New Question Title
+  prompt: |-
+    Does the device retrieve personally identifiable information from or record
+        personally identifiable information to removable media (e.g., removable-HDD,
+    USB
+        memory, DVD-R/RW,CD-R/RW, tape, CF/SD card, memory stick, etc.)?
+  type: yesno
+- id: q11
+  title: New Question Title
+  prompt: |-
+    Does the device transmit/receive or import/export personally identifiable
+        information via dedicated cable connection (e.g., RS-232, RS-423, USB, FireWire,
+        etc.)?
+  type: yesno
+- id: q12
+  title: New Question Title
+  prompt: |-
+    Does the device transmit/receive personally identifiable information via
+        a wired network connection (e.g., RJ45, fiber optic,  etc.)?
+  type: yesno
+- id: q13
+  title: New Question Title
+  prompt: |-
+    Does the device transmit/receive personally identifiable information via
+        a wireless network connection (e.g., WiFi, Bluetooth, NFC, infrared, cellular,
+        etc.)?
+  type: yesno
+- id: q14
+  title: New Question Title
+  prompt: |-
+    Does the device transmit/receive personally identifiable information over
+        an external network (e.g., Internet)?
+  type: yesno
+- id: q15
+  title: New Question Title
+  prompt: |-
+    Does the device import personally identifiable information via scanning
+        a document?
+  type: yesno
+- id: q16
+  title: New Question Title
+  prompt: |-
+    Does the device transmit/receive personally identifiable information via
+        a proprietary protocol?
+  type: yesno
+- id: q17
+  title: New Question Title
+  prompt: |-
+    Does the device use any other mechanism to transmit, import or export personally
+        identifiable information?
+  type: yesno

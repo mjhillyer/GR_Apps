@@ -1,0 +1,1299 @@
+id: module_5
+title: Module 5
+output:
+- id: artifact_1
+  format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+questions:
+- id: msr_intro
+  title: Hologic Product Minimum Security Requirements
+  prompt: To address the increasing risks associated with digital environments, 
+    it is imperative to establish and enforce minimum security requirements that 
+    all products must incorporate. These requirements are necessary to safeguard 
+    user data, protect against unauthorized access and data breaches, and foster 
+    trust and confidence in the product and its services. By implementing these 
+    requirements, product developers can ensure the integrity and privacy of user 
+    information, reduce potential security vulnerabilities, and align their practices 
+    with industry standards and best practices.
+  type: interstitial
+- id: mrq1
+  title: (MSR01) All authentication credentials shall be configurable and changeable.
+  prompt: Are all of the authentication credentials configurable and changeable? This
+    means that there are no hardcoded credentials int he product.
+
+    If there are any hardcoded or fixed credentials or keys, answer No and list what 
+    the fixed credentials or keys are in the Comment field on the following exception page.
+
+    If there are no credentials or keys at all, answer "It doesn't apply"
+
+    Related NIST Controls- IA-5(2), SC-12(2), SC-12(3)
+
+  type: yesno
+  actions:
+  - action: element/add_role/MSR
+    comment: Adding NIST 800-53 controls
+    value: MSR
+- id: ex01
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq1 == 'yes'
+    value: ~
+- id: ex01_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq1 == 'yes'
+    value: ~
+  ask-first:
+  - ex01
+- id: mrq2
+  title: (MSR02) Product shall support user/role privilege levels that restrict user/role 
+    permissions to the minimum required to perform necessary defined functions.
+  prompt: Does the product support user/role privilege levels that restrict user/role
+    permissions to the minimum required to perform necessary defined functions?
+
+    Each user account is unique and changeable. All accounts are manageable by RBAC 
+    (Role Based Access Controls) and only given minimum permissions to perform their roles. 
+
+    In Role-Based Access Control (RBAC), access decisions are based on an individual's roles 
+    and responsibilities within the organization or user base. The process of defining roles 
+    is usually based on analyzing the fundamental goals and structure of an organization and 
+    is usually linked to the security policy. For instance, in a medical organization, the 
+    different roles of users may include those such as a doctor, nurse, attendant, patients, 
+    etc. Obviously, these members require different levels of access in order to perform their 
+    functions, but also the types of web transactions and their allowed context vary greatly 
+    depending on the security policy and any relevant regulations (HIPAA, Gramm-Leach-Bliley, etc.).
+    An RBAC access control framework should provide web application security administrators with 
+    the ability to determine who can perform what actions, when, from where, in what order, and 
+    in some cases under what relational circumstances.
+
+    https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html
+
+    Related NIST Controls- AC-1, AC-2, AC-2(7), AC-3, AC-3(7), AC-6, AC-17
+
+  type: yesno
+- id: ex02
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq2 == 'yes'
+    value: ~
+- id: ex02_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: rmrq2 == 'yes'
+    value: ~
+  ask-first:
+  - ex02
+- id: mrq3
+  title: (MSR03) Product shall encrypt all PII, PHI, and sensitive data (including 
+    authentication credentials) at rest using FIPS 140-3 compliant Level 1 or better 
+    encryption algorithms.
+  prompt: Does the product encrypt all PII, PHI, and sensitive data (including authentication
+    credentials) at rest using FIPS 140-3 compliant Level 1 or better encryption?
+
+    All sensitive data such as PII or PHI should be encrypted at rest and in transit.
+
+    Related NIST Controls- SC-12(2), SC-12(3), SC-13, SC-28, SC-28(1)
+  type: yesno
+- id: ex03
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq3 == 'yes'
+    value: ~
+- id: ex03_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq3 == 'yes'
+    value: ~
+  ask-first:
+  - ex03
+- id: mrq4
+  title: (MSR04) Product shall encrypt all PII, PHI, and other sensitive 
+    data (including authentication credentials) in transit by default using FIPS 140-3 
+    compliant Level 1 or higher standards for ciphers and key sizes.
+  prompt: Does the product encrypt all PII, PHI, and other sensitive data (including
+    authentication credentials) in transit using FIPS 140-3 compliant Level 1 or higher
+    standards for ciphers and key sizes?
+
+    When correctly implemented, TLS can provide a number of security benefits;
+
+    Confidentiality - protection against an attacker from reading the contents of traffic.
+    Integrity - protection against an attacker modifying traffic.
+    Replay prevention - protection against an attacker replaying requests against the server.
+    Authentication - allowing the client to verify that they are connected to the real server (note that the identity of the client is not verified unless client certificates are used).
+    TLS is used by many other protocols to provide encryption and integrity and can be used in a number of different ways. 
+
+    https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html
+
+    All PII, PHI, and other sensitive data (including authentication credentials) is encrypted in 
+    transit using industry-standard cryptography (e.g., TLS) that meets FIPS 140-3 compliant level 
+    1 or higher standards for ciphers and key sizes.
+
+    Related NIST Controls- SC-8, SC-8(1), SC-8(2), SC-12(2), SC-12(3), SC-13, IA-3(1)
+  type: yesno
+- id: ex04
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq4 == 'yes'
+    value: ~
+- id: ex04_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq4 == 'yes'
+    value: ~
+  ask-first:
+  - ex04
+- id: mrq5
+  title: Secure Wipe
+  prompt: Does the product provide the capability to securely remove all PHI, PII,
+    and other sensitive data on demand, such that, at a minimum, the cryptographic
+    key for encrypted data is destroyed, or all data is overwritten with at least
+    one pass of all 1s or all 0s?
+  type: yesno
+- id: ex05
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq5 == 'yes'
+    value: ~
+- id: ex05_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq5 == 'yes'
+    value: ~
+  ask-first:
+  - ex05
+- id: mrq6
+  title: Product Hardening
+  prompt: Is the product hardened (all unneeded ports, software, and services are
+    removed and/or disabled by default)?
+  type: yesno
+- id: ex06
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq6 == 'yes'
+    value: ~
+- id: ex06_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq6 == 'yes'
+    value: ~
+  ask-first:
+  - ex06
+- id: mrq7
+  title: Malicious Software Protections
+  prompt: Does the product include protection from malicious software (e.g., anti-virus,
+    application whitelisting)?
+  type: yesno
+- id: ex07
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq7 == 'yes'
+    value: ~
+- id: ex07_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq7 == 'yes'
+    value: ~
+  ask-first:
+  - ex07
+- id: mrq8
+  title: Audit Logging
+  prompt: Does the product provide audit logging capability for both clinical/application
+    and system events?
+  type: yesno
+  actions:
+  - action: element/add_role/MSR
+    comment: >-
+      Adding minimum security requirement NIST 800-53 rev. 5 controls to the product control
+      catalog.
+    value: 'no'
+  - action: element/add_role/MSR
+    comment: >-
+      Adding minimum security requirement NIST 800-53 rev. 5 controls to the product control
+      catalog.
+    value: 'yes'
+- id: q0
+  title: New Question Title
+  prompt: Exception is needed
+  type: interstitial
+- id: ex08
+  title: Requirements Exception
+  prompt: Describe why the product does not meet the requirement, the intended plan
+    (if any) to resolve this in a future release, and any other information.
+  type: longtext
+  impute:
+  - condition: mrq8 == 'yes'
+    value: ~
+- id: ex08_date
+  title: Requirements Exception
+  prompt: Please enter the anticipated date the requirement will be satisfied.
+  type: date
+  impute:
+  - condition: mrq8 == 'yes'
+    value: ~
+  ask-first:
+  - ex08
+- id: q9
+  title: Product Security Controls Assessment
+  prompt: |-
+    Security Controls
+
+    This module will ask you about your product functionality to determine what security controls should be implemented into the product design.
+  type: interstitial
+- id: q10
+  title: Remote Service
+  prompt: Will the product be capable of Remote Service?
+  type: yesno
+- id: q11
+  title: Cloud Hosted
+  prompt: Is the product a cloud hosted software or service?
+  type: yesno
+- id: q12
+  title: Mobile
+  prompt: Is the device mobile and could easily be stolen?
+  type: yesno
+- id: q13
+  title: PII / PHI
+  prompt: |-
+    Will this product  display, transmit, store, or modify personally identifiable
+        information?
+  type: yesno
+- id: q14
+  title: Medical Urgency
+  prompt: |-
+    Does the product need to facilitate medical urgency needs and therefore
+        is required to have a low barrier to user access?
+  type: yesno
+- id: q15
+  title: Number of records
+  prompt: Does the product store more than 500 patient records?
+  type: yesno
+- id: q16
+  title: High Availability
+  prompt: Does the product require high availability (99.9+ uptime)?
+  type: yesno
+- id: q17
+  title: Official Record
+  prompt: Does the product store an official medical record? (EMR, PACS, etc...)
+  type: yesno
+- id: q18
+  title: Wireless
+  prompt: Will the product have wireless capabilities (Wi-Fi, Bluetooth, 5G)?
+  type: yesno
+- id: q19
+  title: DOD Customer
+  prompt: |-
+    Will the product be sold to the US Department of Defence (DOD) or Veterans
+        Affairs (VA)?
+  type: yesno
+- id: q20
+  title: Multiple Customer / Site Use
+  prompt: Will the product be multi-site use (Trailer based MR, etc)?
+  type: yesno
+- id: q21
+  title: Removable Media
+  prompt: Will the product contain removable media? (CD-Rom, USB, etc)
+  type: yesno
+- id: q22
+  title: New Question Title
+  prompt: |-
+    The device's ability to prevent access and misuse by unauthorized users
+        if device is left idle for a period of time.
+  type: yesno
+- id: q23
+  title: New Question Title
+  prompt: |-
+    Can the device be configured to force reauthorization of logged-in user(s)
+        after a predetermined length of inactivity (e.g., auto-logoff, session lock, password
+        protected screen saver)?
+  type: yesno
+- id: q24
+  title: New Question Title
+  prompt: |-
+    Is the length of inactivity time before auto-logoff/screen lock user or
+        administrator configurable?
+  type: yesno
+- id: q25
+  title: New Question Title
+  prompt: |-
+    Can the medical device create additional audit logs or reports beyond standard
+        operating system logs?
+  type: yesno
+- id: q26
+  title: New Question Title
+  prompt: Does the audit log record a USER ID?
+  type: yesno
+- id: q27
+  title: New Question Title
+  prompt: Does other personally identifiable information exist in the audit trail?
+  type: yesno
+- id: q28
+  title: New Question Title
+  prompt: |-
+    Are events recorded in an audit log? If yes, indicate which of the following
+        events are recorded in the audit log
+  type: yesno
+- id: q29
+  title: New Question Title
+  prompt: Successful login/logout attempts?
+  type: yesno
+- id: q30
+  title: New Question Title
+  prompt: Unsuccessful login/logout attempts?
+  type: yesno
+- id: q31
+  title: New Question Title
+  prompt: Modification of user privileges?
+  type: yesno
+- id: q32
+  title: New Question Title
+  prompt: Creation/modification/deletion of users?
+  type: yesno
+- id: q33
+  title: New Question Title
+  prompt: Presentation of clinical or PII data (e.g. display, print)?
+  type: yesno
+- id: q34
+  title: New Question Title
+  prompt: Creation/modification/deletion of data?
+  type: yesno
+- id: q35
+  title: New Question Title
+  prompt: |-
+    Import/export of data from removable media (e.g. USB drive, external hard
+        drive, DVD)?
+  type: yesno
+- id: q36
+  title: New Question Title
+  prompt: |-
+    Receipt/transmission of data or commands over a network or point-to-point
+        connection?
+  type: yesno
+- id: q37
+  title: New Question Title
+  prompt: Remote or on-site support?
+  type: yesno
+- id: q38
+  title: New Question Title
+  prompt: Application Programming Interface (API) and similar activity?
+  type: yesno
+- id: q39
+  title: New Question Title
+  prompt: Emergency access?
+  type: yesno
+- id: q40
+  title: New Question Title
+  prompt: Other events (e.g., software updates)?
+  type: yesno
+- id: q41
+  title: New Question Title
+  prompt: Is the audit capability documented in more detail?
+  type: yesno
+- id: q42
+  title: New Question Title
+  prompt: |-
+    Can the owner/operator define or select which events are recorded in the
+        audit log?
+  type: yesno
+- id: q43
+  title: New Question Title
+  prompt: |-
+    Is a list of data attributes that are captured in the audit log for an event
+        available?
+  type: yesno
+- id: q44
+  title: New Question Title
+  prompt: Does the audit log record date/time?
+  type: yesno
+- id: q45
+  title: New Question Title
+  prompt: |-
+    Can date and time be synchronized by Network Time Protocol (NTP) or equivalent
+        time source?
+  type: yesno
+- id: q46
+  title: New Question Title
+  prompt: Can audit log content be exported?
+  type: yesno
+- id: q47
+  title: New Question Title
+  prompt: Via physical media?
+  type: yesno
+- id: q48
+  title: New Question Title
+  prompt: Via IHE Audit Trail and Node Authentication (ATNA) profile to SIEM?
+  type: yesno
+- id: q49
+  title: New Question Title
+  prompt: Via Other communications (e.g., external service device, mobile applications)?
+  type: yesno
+- id: q50
+  title: New Question Title
+  prompt: Are audit logs encrypted in transit or on storage media?
+  type: yesno
+- id: q51
+  title: New Question Title
+  prompt: Can audit logs be monitored/reviewed by owner/operator?
+  type: yesno
+- id: q52
+  title: New Question Title
+  prompt: Are audit logs protected from modification?
+  type: yesno
+- id: q53
+  title: New Question Title
+  prompt: Are audit logs protected from access?
+  type: yesno
+- id: q54
+  title: New Question Title
+  prompt: Can audit logs be analyzed by the device?
+  type: yesno
+- id: q55
+  title: New Question Title
+  prompt: |-
+    Does the device prevent access to unauthorized users through user login
+        requirements or other mechanism?
+  type: yesno
+- id: q56
+  title: New Question Title
+  prompt: |-
+    Can the device be configured to use federated credentials management of
+        users for authorization (e.g., LDAP, OAuth)?
+  type: yesno
+- id: q57
+  title: New Question Title
+  prompt: Can the customer push group policies to the device (e.g., Active Directory)?
+  type: yesno
+- id: q58
+  title: New Question Title
+  prompt: Are any special groups, organizational units, or group policies required?
+  type: yesno
+- id: q59
+  title: New Question Title
+  prompt: |-
+    Can users be assigned different privilege levels based on 'role' (e.g.,
+        user, administrator, and/or service, etc.)?
+  type: yesno
+- id: q60
+  title: New Question Title
+  prompt: |-
+    Can the device owner/operator grant themselves unrestricted administrative
+        privileges (e.g., access operating system or application via local root or administrator
+        account)?
+  type: yesno
+- id: q61
+  title: New Question Title
+  prompt: Does the device authorize or control all API access requests?
+  type: yesno
+- id: q62
+  title: New Question Title
+  prompt: Does the device run in a restricted access mode, or ‘kiosk mode’, by default?
+  type: yesno
+- id: c54
+  title: MDS2
+  prompt: Does the device contain any software or firmware which may require security
+    updates during its operational life, either from the device manufacturer or from
+    a third-party manufacturer of the software/firmware?  If no, answer “N/A” to questions
+    in this section.
+  type: yesno
+- id: c55
+  title: MDS2
+  prompt: Does the device contain an Operating System? If yes, complete 2.1-2.4.
+  type: yesno
+- id: c56
+  title: MDS2
+  prompt: Does the device documentation provide instructions for owner/operator installation
+    of patches or software updates?
+  type: yesno
+- id: c57
+  title: MDS2
+  prompt: Does the device require vendor or vendor-authorized service to install patches
+    or software updates?
+  type: yesno
+- id: c58
+  title: MDS2
+  prompt: Does the device have the capability to receive remote installation of patches
+    or software updates?
+  type: yesno
+- id: c59
+  title: MDS2
+  prompt: Does the medical device manufacturer allow security updates from any third-party
+    manufacturers (e.g., Microsoft) to be installed without approval from the manufacturer?
+  type: yesno
+- id: c60
+  title: MDS2
+  prompt: Does the device contain Drivers and Firmware? If yes, complete 3.1-3.4.
+  type: yesno
+- id: c61
+  title: MDS2
+  prompt: Does the device documentation provide instructions for owner/operator installation
+    of patches or software updates?
+  type: yesno
+- id: c62
+  title: MDS2
+  prompt: Does the device require vendor or vendor-authorized service to install patches
+    or software updates?
+  type: yesno
+- id: c63
+  title: MDS2
+  prompt: Does the device have the capability to receive remote installation of patches
+    or software updates?
+  type: yesno
+- id: c64
+  title: MDS2
+  prompt: Does the medical device manufacturer allow security updates from any third-party
+    manufacturers (e.g., Microsoft) to be installed without approval from the manufacturer?
+  type: yesno
+- id: c65
+  title: MDS2
+  prompt: Does the device contain Anti-Malware Software? If yes, complete 4.1-4.4.
+  type: yesno
+- id: c66
+  title: MDS2
+  prompt: Does the device documentation provide instructions for owner/operator installation
+    of patches or software updates?
+  type: yesno
+- id: c67
+  title: MDS2
+  prompt: Does the device require vendor or vendor-authorized service to install patches
+    or software updates?
+  type: yesno
+- id: c68
+  title: MDS2
+  prompt: Does the device have the capability to receive remote installation of patches
+    or software updates?
+  type: yesno
+- id: c69
+  title: MDS2
+  prompt: Does the medical device manufacturer allow security updates from any third-party
+    manufacturers (e.g., Microsoft) to be installed without approval from the manufacturer?
+  type: yesno
+- id: c70
+  title: MDS2
+  prompt: Does the device contain Non-Operating System commercial off-the-shelf components?
+    If yes, complete 5.1-5.4.
+  type: yesno
+- id: c71
+  title: MDS2
+  prompt: Does the device documentation provide instructions for owner/operator installation
+    of patches or software updates?
+  type: yesno
+- id: c72
+  title: MDS2
+  prompt: Does the device require vendor or vendor-authorized service to install patches
+    or software updates?
+  type: yesno
+- id: c73
+  title: MDS2
+  prompt: Does the device have the capability to receive remote installation of patches
+    or software updates?
+  type: yesno
+- id: c74
+  title: MDS2
+  prompt: Does the medical device manufacturer allow security updates from any third-party
+    manufacturers (e.g., Microsoft) to be installed without approval from the manufacturer?
+  type: yesno
+- id: c75
+  title: MDS2
+  prompt: Does the device contain other software components (e.g., asset management
+    software, license management)? If yes, please provide details or refernce in notes
+    and complete 6.1-6.4.
+  type: yesno
+- id: c76
+  title: MDS2
+  prompt: Does the device documentation provide instructions for owner/operator installation
+    of patches or software updates?
+  type: yesno
+- id: c77
+  title: MDS2
+  prompt: Does the device require vendor or vendor-authorized service to install patches
+    or software updates?
+  type: yesno
+- id: c78
+  title: MDS2
+  prompt: Does the device have the capability to receive remote installation of patches
+    or software updates?
+  type: yesno
+- id: c79
+  title: MDS2
+  prompt: Does the medical device manufacturer allow security updates from any third-party
+    manufacturers (e.g., Microsoft) to be installed without approval from the manufacturer?
+  type: yesno
+- id: c80
+  title: MDS2
+  prompt: Does the manufacturer notify the customer when updates are approved for
+    installation?
+  type: yesno
+- id: c81
+  title: MDS2
+  prompt: Does the device perform automatic installation of software updates?
+  type: yesno
+- id: c82
+  title: MDS2
+  prompt: Does the manufacturer have an approved list of third-party software that
+    can be installed on the device?
+  type: yesno
+- id: c83
+  title: MDS2
+  prompt: Can the owner/operator install manufacturer-approved third-party software
+    on the device themselves?
+  type: yesno
+- id: c84
+  title: MDS2
+  prompt: Does the system have mechanism in place to prevent installation of unapproved
+    software?
+  type: yesno
+- id: c85
+  title: MDS2
+  prompt: Does the manufacturer have a process in place to assess device vulnerabilities
+    and updates?
+  type: yesno
+- id: c86
+  title: MDS2
+  prompt: Does the manufacturer provide customers with review and approval status
+    of updates?
+  type: yesno
+- id: c87
+  title: MDS2
+  prompt: Is there an update review cycle for the device?
+  type: yesno
+- id: c88
+  title: MDS2
+  prompt: Does the device provide an integral capability to de-identify personally
+    identifiable information?
+  type: yesno
+- id: c89
+  title: MDS2
+  prompt: Does the device support de-identification profiles that comply with the
+    DICOM standard for de-identification?
+  type: yesno
+- id: c90
+  title: MDS2
+  prompt: Does the device maintain long term primary storage of personally identifiable
+    information / patient information (e.g. PACS)?
+  type: yesno
+- id: c91
+  title: MDS2
+  prompt: Does the device have a “factory reset” function to restore the original
+    device settings as provided by the manufacturer?
+  type: yesno
+- id: c92
+  title: MDS2
+  prompt: Does the device have an integral data backup capability to removable media?
+  type: yesno
+- id: c93
+  title: MDS2
+  prompt: Does the device have an integral data backup capability to remote storage?
+  type: yesno
+- id: c94
+  title: MDS2
+  prompt: Does the device have a backup capability for system configuration information,
+    patch restoration, and software restoration?
+  type: yesno
+- id: c95
+  title: MDS2
+  prompt: Does the device provide the capability to check the integrity and authenticity
+    of a backup?
+  type: yesno
+- id: c96
+  title: MDS2
+  prompt: Does the device incorporate an emergency access (i.e. “break-glass”) feature?
+  type: yesno
+- id: c97
+  title: MDS2
+  prompt: Does the device provide data integrity checking mechanisms of stored health
+    data (e.g., hash or digital signature)?
+  type: yesno
+- id: c98
+  title: MDS2
+  prompt: Does the device provide error/failure protection and recovery mechanisms
+    for stored health data (e.g., RAID-5)?
+  type: yesno
+- id: c99
+  title: MDS2
+  prompt: Is the device capable of hosting executable software?
+  type: yesno
+- id: c100
+  title: MDS2
+  prompt: Does the device support the use of anti-malware software (or other anti-malware
+    mechanism)? Provide details or reference in notes.
+  type: yesno
+- id: c101
+  title: MDS2
+  prompt: Does the device include anti-malware software by default?
+  type: yesno
+- id: c102
+  title: MDS2
+  prompt: Does the device have anti-malware software available as an option?
+  type: yesno
+- id: c103
+  title: MDS2
+  prompt: Does the device documentation allow the owner/operator to install or update
+    anti-malware software?
+  type: yesno
+- id: c104
+  title: MDS2
+  prompt: Can the device owner/operator independently (re-)configure anti-malware
+    settings?
+  type: yesno
+- id: c105
+  title: MDS2
+  prompt: Does notification of malware detection occur in the device user interface?
+  type: yesno
+- id: c106
+  title: MDS2
+  prompt: Can only manufacturer-authorized persons repair systems when malware has
+    been detected?
+  type: yesno
+- id: c107
+  title: MDS2
+  prompt: Are malware notifications written to a log?
+  type: yesno
+- id: c108
+  title: MDS2
+  prompt: Are there any restrictions on anti-malware (e.g., purchase, installation,
+    configuration, scheduling)?
+  type: yesno
+- id: c109
+  title: MDS2
+  prompt: If the answer to MLDP-2 is NO, and anti-malware cannot be installed on the
+    device, are other compensating controls in place or available?
+  type: yesno
+- id: c110
+  title: MDS2
+  prompt: Does the device employ application whitelisting that restricts the software
+    and services that are permitted to be run on the device?
+  type: yesno
+- id: c111
+  title: MDS2
+  prompt: Does the device employ a host-based intrusion detection/prevention system?
+  type: yesno
+- id: c112
+  title: MDS2
+  prompt: Can the host-based intrusion detection/prevention system be configured by
+    the customer?
+  type: yesno
+- id: c113
+  title: MDS2
+  prompt: Can a host-based intrusion detection/prevention system be installed by the
+    customer?
+  type: yesno
+- id: c114
+  title: MDS2
+  prompt: Does the device provide/support any means of node authentication that assures
+    both the sender and the recipient of data are known to each other and are authorized
+    to receive transferred information (e.g. Web APIs, SMTP, SNMP)?
+  type: yesno
+- id: c115
+  title: MDS2
+  prompt: Are network access control mechanisms supported (E.g., does the device have
+    an internal firewall, or use a network connection white list)?
+  type: yesno
+- id: c116
+  title: MDS2
+  prompt: Is the firewall ruleset documented and available for review?
+  type: yesno
+- id: c117
+  title: MDS2
+  prompt: Does the device use certificate-based network connection authentication?
+  type: yesno
+- id: c118
+  title: MDS2
+  prompt: Does the device have hardware connectivity capabilities?
+  type: yesno
+- id: c119
+  title: MDS2
+  prompt: Does the device support wireless connections?
+  type: yesno
+- id: c120
+  title: MDS2
+  prompt: Does the device support Wi-Fi?
+  type: yesno
+- id: c121
+  title: MDS2
+  prompt: Does the device support Bluetooth?
+  type: yesno
+- id: c122
+  title: MDS2
+  prompt: Does the device support other wireless network connectivity (e.g. LTE, Zigbee,
+    proprietary)?
+  type: yesno
+- id: c123
+  title: MDS2
+  prompt: Does the device support other wireless connections (e.g., custom RF controls,
+    wireless detectors)?
+  type: yesno
+- id: c124
+  title: MDS2
+  prompt: Does the device support physical connections?
+  type: yesno
+- id: c125
+  title: MDS2
+  prompt: Does the device have available RJ45 Ethernet ports?
+  type: yesno
+- id: c126
+  title: MDS2
+  prompt: Does the device have available USB ports?
+  type: yesno
+- id: c127
+  title: MDS2
+  prompt: Does the device require, use, or support removable memory devices?
+  type: yesno
+- id: c128
+  title: MDS2
+  prompt: Does the device support other physical connectivity?
+  type: yesno
+- id: c129
+  title: MDS2
+  prompt: Does the manufacturer provide a list of network ports and protocols that
+    are used or may be used on the device?
+  type: yesno
+- id: c130
+  title: MDS2
+  prompt: Can the device communicate with other systems within the customer environment?
+  type: yesno
+- id: c131
+  title: MDS2
+  prompt: Can the device communicate with other systems external to the customer environment
+    (e.g., a service host)?
+  type: yesno
+- id: c132
+  title: MDS2
+  prompt: Does the device make or receive API calls?
+  type: yesno
+- id: c133
+  title: MDS2
+  prompt: Does the device require an internet connection for its intended use?
+  type: yesno
+- id: c134
+  title: MDS2
+  prompt: Does the device support Transport Layer Security (TLS)?
+  type: yesno
+- id: c135
+  title: MDS2
+  prompt: Is TLS configurable?
+  type: yesno
+- id: c136
+  title: MDS2
+  prompt: Does the device provide operator control functionality from a separate device
+    (e.g., telemedicine)?
+  type: yesno
+- id: c137
+  title: MDS2
+  prompt: Does the device support and enforce unique IDs and passwords for all users
+    and roles (including service accounts)?
+  type: yesno
+- id: c138
+  title: MDS2
+  prompt: Does the device enforce authentication of unique IDs and passwords for all
+    users and roles (including service accounts)?
+  type: yesno
+- id: c139
+  title: MDS2
+  prompt: Is the device configurable to authenticate users through an external authentication
+    service (e.g., MS Active Directory, NDS, LDAP, OAuth, etc.)?
+  type: yesno
+- id: c140
+  title: MDS2
+  prompt: Is the device configurable to lock out a user after a certain number of
+    unsuccessful logon attempts?
+  type: yesno
+- id: c141
+  title: MDS2
+  prompt: Are all default accounts (e.g., technician service accounts, administrator
+    accounts) listed in the documentation?
+  type: yesno
+- id: c142
+  title: MDS2
+  prompt: Can all passwords be changed?
+  type: yesno
+- id: c143
+  title: MDS2
+  prompt: Is the device configurable to enforce creation of user account passwords
+    that meet established (organization specific) complexity rules?
+  type: yesno
+- id: c144
+  title: MDS2
+  prompt: Does the device support account passwords that expire periodically?
+  type: yesno
+- id: c145
+  title: MDS2
+  prompt: Does the device support multi-factor authentication?
+  type: yesno
+- id: c146
+  title: MDS2
+  prompt: Does the device support single sign-on (SSO)?
+  type: yesno
+- id: c147
+  title: MDS2
+  prompt: Can user accounts be disabled/locked on the device?
+  type: yesno
+- id: c148
+  title: MDS2
+  prompt: Does the device support biometric controls?
+  type: yesno
+- id: c149
+  title: MDS2
+  prompt: Does the device support physical tokens (e.g. badge access)?
+  type: yesno
+- id: c150
+  title: MDS2
+  prompt: Does the device support group authentication (e.g. hospital teams)?
+  type: yesno
+- id: c151
+  title: MDS2
+  prompt: Does the application or device store or manage authentication credentials?
+  type: yesno
+- id: c152
+  title: MDS2
+  prompt: Are credentials stored using a secure method?
+  type: yesno
+- id: c153
+  title: MDS2
+  prompt: Is the device software only? If yes, answer “N/A” to remaining questions
+    in this section.
+  type: yesno
+- id: c154
+  title: MDS2
+  prompt: Are all device components maintaining personally identifiable information
+    (other than removable media) physically secure (i.e., cannot remove without tools)?
+  type: yesno
+- id: c155
+  title: MDS2
+  prompt: Are all device components maintaining personally identifiable information
+    (other than removable media) physically secured behind an individually keyed locking
+    device?
+  type: yesno
+- id: c156
+  title: MDS2
+  prompt: Does the device have an option for the customer to attach a physical lock
+    to restrict access to removable media?
+  type: yesno
+- id: c157
+  title: MDS2
+  prompt: Was a secure software development process, such as ISO/IEC 27034 or IEC
+    62304, followed during product development?
+  type: yesno
+- id: c158
+  title: MDS2
+  prompt: Does the manufacturer evaluate third-party applications and software components
+    included in the device for secure development practices?
+  type: yesno
+- id: c159
+  title: MDS2
+  prompt: Does the manufacturer maintain a web page or other source of information
+    on software support dates and updates?
+  type: yesno
+- id: c160
+  title: MDS2
+  prompt: Does the manufacturer have a plan for managing third-party component end-of-life?
+  type: yesno
+- id: c161
+  title: MDS2
+  prompt: Is the SBoM for this product available?
+  type: yesno
+- id: c162
+  title: MDS2
+  prompt: Does the SBoM follow a standard or common method in describing software
+    components?
+  type: yesno
+- id: c163
+  title: MDS2
+  prompt: Are the software components identified?
+  type: yesno
+- id: c164
+  title: MDS2
+  prompt: Are the developers/manufacturers of the software components identified?
+  type: yesno
+- id: c165
+  title: MDS2
+  prompt: Are the major version numbers of the software components identified?
+  type: yesno
+- id: c166
+  title: MDS2
+  prompt: Are any additional descriptive elements identified?
+  type: yesno
+- id: c167
+  title: MDS2
+  prompt: Does the device include a command or process method available to generate
+    a list of software components installed on the device?
+  type: yesno
+- id: c168
+  title: MDS2
+  prompt: Is there an update process for the SBoM?
+  type: yesno
+- id: c169
+  title: MDS2
+  prompt: Is the device hardened in accordance with any industry standards?
+  type: yesno
+- id: c170
+  title: MDS2
+  prompt: Has the device received any cybersecurity certifications?
+  type: yesno
+- id: c171
+  title: MDS2
+  prompt: Does the device employ any mechanisms for software integrity checking
+  type: yesno
+- id: c172
+  title: MDS2
+  prompt: Does the device employ any mechanism (e.g., release-specific hash key, checksums,
+    digital signature, etc.) to ensure the installed software is manufacturer-authorized?
+  type: yesno
+- id: c173
+  title: MDS2
+  prompt: Does the device employ any mechanism (e.g., release-specific hash key, checksums,
+    digital signature, etc.) to ensure the software updates are the manufacturer-authorized
+    updates?
+  type: yesno
+- id: c174
+  title: MDS2
+  prompt: Can the owner/operator perform software integrity checks (i.e., verify that
+    the system has not been modified or tampered with)?
+  type: yesno
+- id: c175
+  title: MDS2
+  prompt: Is the system configurable to allow the implementation of file-level, patient
+    level, or other types of access controls?
+  type: yesno
+- id: c176
+  title: MDS2
+  prompt: Does the device provide role-based access controls?
+  type: yesno
+- id: c177
+  title: MDS2
+  prompt: Are any system or user accounts restricted or disabled by the manufacturer
+    at system delivery?
+  type: yesno
+- id: c178
+  title: MDS2
+  prompt: Are any system or user accounts configurable by the end user after initial
+    configuration?
+  type: yesno
+- id: c179
+  title: MDS2
+  prompt: Does this include restricting certain system or user accounts, such as service
+    technicians, to least privileged access?
+  type: yesno
+- id: c180
+  title: MDS2
+  prompt: Are all shared resources (e.g., file shares) which are not required for
+    the intended use of the device disabled?
+  type: yesno
+- id: c181
+  title: MDS2
+  prompt: Are all communication ports and protocols that are not required for the
+    intended use of the device disabled?
+  type: yesno
+- id: c182
+  title: MDS2
+  prompt: Are all services (e.g., telnet, file transfer protocol [FTP], internet information
+    server [IIS], etc.), which are not required for the intended use of the device
+    deleted/disabled?
+  type: yesno
+- id: c183
+  title: MDS2
+  prompt: Are all applications (COTS applications as well as OS-included applications,
+    e.g., MS Internet Explorer, etc.) which are not required for the intended use
+    of the device deleted/disabled?
+  type: yesno
+- id: c184
+  title: MDS2
+  prompt: Can the device prohibit boot from uncontrolled or removable media (i.e.,
+    a source other than an internal drive or memory component)?
+  type: yesno
+- id: c185
+  title: MDS2
+  prompt: Can unauthorized software or hardware be installed on the device without
+    the use of physical tools?
+  type: yesno
+- id: c186
+  title: MDS2
+  prompt: Does the product documentation include information on operational network
+    security scanning by users?
+  type: yesno
+- id: c187
+  title: MDS2
+  prompt: Can the device be hardened beyond the default provided state?
+  type: yesno
+- id: c188
+  title: MDS2
+  prompt: Are instructions available from vendor for increased hardening?
+  type: yesno
+- id: c189
+  title: MDS2
+  prompt: Can the system prevent access to BIOS or other bootloaders during boot?
+  type: yesno
+- id: c190
+  title: MDS2
+  prompt: Have additional hardening methods not included in 2.3.19 been used to harden
+    the device?
+  type: yesno
+- id: c191
+  title: MDS2
+  prompt: Does the device include security documentation for the owner/operator?
+  type: yesno
+- id: c192
+  title: MDS2
+  prompt: Does the device have the capability, and provide instructions, for the permanent
+    deletion of data from the device or media?
+  type: yesno
+- id: c193
+  title: MDS2
+  prompt: Are all access accounts documented?
+  type: yesno
+- id: c194
+  title: MDS2
+  prompt: Can the owner/operator manage password control for all accounts?
+  type: yesno
+- id: c195
+  title: MDS2
+  prompt: Does the product include documentation on recommended compensating controls
+    for the device?
+  type: yesno
+- id: c196
+  title: MDS2
+  prompt: Can the device encrypt data at rest?
+  type: yesno
+- id: c197
+  title: MDS2
+  prompt: Is all data encrypted or otherwise protected?
+  type: yesno
+- id: c198
+  title: MDS2
+  prompt: Is the data encryption capability configured by default?
+  type: yesno
+- id: c199
+  title: MDS2
+  prompt: Are instructions available to the customer to configure encryption?
+  type: yesno
+- id: c200
+  title: MDS2
+  prompt: Can the encryption keys be changed or configured?
+  type: yesno
+- id: c201
+  title: MDS2
+  prompt: Is the data stored in a database located on the device?
+  type: yesno
+- id: c202
+  title: MDS2
+  prompt: Is the data stored in a database external to the device?
+  type: yesno
+- id: c203
+  title: MDS2
+  prompt: Can personally identifiable information be transmitted only via a point-to-point
+    dedicated cable?
+  type: yesno
+- id: c204
+  title: MDS2
+  prompt: Is personally identifiable information encrypted prior to transmission via
+    a network or removable media?
+  type: yesno
+- id: c205
+  title: MDS2
+  prompt: If data is not encrypted by default, can the customer configure encryption
+    options?
+  type: yesno
+- id: c206
+  title: MDS2
+  prompt: Is personally identifiable information transmission restricted to a fixed
+    list of network destinations?
+  type: yesno
+- id: c207
+  title: MDS2
+  prompt: Are connections limited to authenticated systems?
+  type: yesno
+- id: c208
+  title: MDS2
+  prompt: Are secure transmission methods supported/implemented (DICOM, HL7, IEEE
+    11073)?
+  type: yesno
+- id: c209
+  title: MDS2
+  prompt: Does the device support any mechanism (e.g., digital signatures) intended
+    to ensure data is not modified during transmission?
+  type: yesno
+- id: c210
+  title: MDS2
+  prompt: Does the device include multiple sub-components connected by external cables?
+  type: yesno
+- id: c211
+  title: MDS2
+  prompt: Does the device permit remote service connections for device analysis or
+    repair?
+  type: yesno
+- id: c212
+  title: MDS2
+  prompt: Does the device allow the owner/operator to initiative remote service sessions
+    for device analysis or repair?
+  type: yesno
+- id: c213
+  title: MDS2
+  prompt: Is there an indicator for an enabled and active remote session?
+  type: yesno
+- id: c214
+  title: MDS2
+  prompt: Can patient data be accessed or viewed from the device during the remote
+    session?
+  type: yesno
+- id: c215
+  title: MDS2
+  prompt: Does the device permit or use remote service connections for predictive
+    maintenance data?
+  type: yesno
+- id: c216
+  title: MDS2
+  prompt: Does the device have any other remotely accessible functionality (e.g. software
+    updates, remote training)?
+  type: yesno
+- id: q1
+  title: Adding a component.
+  prompt: This will add a component. Check the controls count after completing this
+    module.
+  type: choice
+  choices:
+  - key: cybrary
+    text: Cybrary
+  - key: starwars
+    text: Star Wars
+  - key: lordoftherings
+    text: Lord of the Rings
+  - key: other
+    text: Other
+  actions:
+  - action: element/add_role/Cybrary
+    comment: Add elements assigned Cybrary to selected components
+    value: cybrary

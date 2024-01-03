@@ -1,0 +1,201 @@
+id: module_2
+title: Module 2
+output:
+- id: artifact_1
+  format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+questions:
+- id: q1
+  title: Environmental and Design Risk Analysis
+  prompt: |-
+    Perform the product Environmental and Design Risk Analysis
+
+    This module will help you assess the environmental and design risks of the product.
+  type: interstitial
+  choices:
+  - key: startrek
+    text: Star Trek
+  - key: starwars
+    text: Star Wars
+  - key: lordoftherings
+    text: Lord of the Rings
+  - key: other
+    text: Other
+- id: q0
+  title: Baseline Risk Level
+  prompt: What is the initial Risk level for the product?
+  type: choice
+  choices:
+  - key: Low
+    text: Low
+    help: Low impact indicates that the loss of confidentiality, integrity, or availability
+      is expected to have a limited adverse effect on organizational operations, organizational
+      assets, or individuals.
+  - key: Moderate
+    text: Moderate
+    help: Moderate impact indicates that the loss of confidentiality, integrity, or
+      availability is expected to have a serious adverse effect on organizational
+      operations, organizational assets, or individuals.
+  - key: High
+    text: High
+    help: High impact indicates the loss of confidentiality, integrity, or availability
+      is expected to have a severe or catastrophic adverse effect on organizational
+      operations, organizational assets, or individuals.
+  actions:
+  - action: system/assign_baseline/NIST_SP-800-53_rev4=+=low
+    comment: Assign 800-53 Rev 4 Low baseline set of controls to a system
+    value: Low
+  - action: system/assign_baseline/NIST_SP-800-53_rev4=+=moderate
+    comment: Assign 800-53 Rev 4 Moderate baseline set of controls to a system
+    value: Moderate
+  - action: system/assign_baseline/NIST_SP-800-53_rev4=+=high
+    comment: Assign 800-53 Rev 4 High baseline set of controls to a system
+    value: High
+- id: deploy_type
+  title: Product Deployment Method
+  prompt: How will this product be deployed for commercial use?
+  type: choice
+  choices:
+  - key: application
+    text: Application Package
+    help: Any type of stand-alone software application for servers or workstations.
+  - key: device
+    text: Device
+    help: Any type of device that contains software and hardware.
+  - key: mobile
+    text: Mobile Application
+    help: Software designed for mobile devices.
+  - key: cloud
+    text: Cloud
+    help: Application hosted as a SAAS (internal or external).
+  - key: other
+    text: Other
+    help: Does not match any other platform technology.
+- id: q6
+  title: Cloud Service Model
+  prompt: What kind of cloud service model is used by your product?
+  type: choice
+  choices:
+  - key: saas
+    text: Software as a Service
+    help: "SaaS systems are typically accessed online via a subscription rather than
+      something that is bought and installed\r\non premises. Examples of SaaS are
+      Google Apps, Salesforce, Dropbox, etc.\r\nSaaS systems allow for the consumer
+      to build anything other than servers. \r\n"
+  - key: paas
+    text: Platform as a Service
+    help: "PaaS systems are typically hardware and software tools available over the
+      internet.\r\nExamples of PaaS are AWS Elastic Beanstalk, Windows Azure, OpenShift,
+      Force.com, etc.\r\nPaaS systems can build non-server things, databases, offers
+      APIs or other developer toolkits.\r\n"
+  - key: iaas
+    text: Infrastructure as a Service
+    help: "IaaS systems are cloud-based services, pay-as-you-go for services such
+      as storage, networking, and virtualization.\r\nExamples of IaaS are AWS EC2,
+      Rackspace, Google Compute Engine (GCE) Digital Ocean, etc.\r\nIaaS systems are
+      the only system type that can build servers.\r\n"
+  - key: other
+    text: Other?
+  impute:
+  - condition: deploy_type != 'cloud'
+    value: ~
+- id: cloud_service_model_other
+  title: Other System
+  prompt: |-
+    Does your system fit outside the bounds of SaaS, PaaS, or IaaS?
+    If you feel your system is not any of these types, explain the system below.
+  type: longtext
+  impute:
+  - condition: q6 != 'other'
+    value: ~
+- id: cloud_model
+  title: Cloud Deployment Model
+  prompt: |-
+    Service Provider Cloud Deployment Model
+    What is your system's cloud deployment model?
+  type: choice
+  choices:
+  - key: public
+    text: Public (Cloud services and infrastructure supporting multiple organizations
+      and agency clients)
+  - key: private
+    text: Private (Cloud services and infrastructure dedicated to a specific organization/agency
+      and no other clients)
+  - key: govt_only
+    text: Government Only Community (Cloud services and infrastructure shared by several
+      organizations/agencies with same policy and compliance considerations)
+  - key: hybrid
+    text: Hybrid (Need to explain)
+  impute:
+  - condition: deploy_type != 'cloud'
+    value: ~
+- id: choice_hybrid
+  title: Hybrid Cloud Deployment Model
+  prompt: |-
+    You selected "Hybrid" as your system status.
+    Could you explain?
+  type: longtext
+  impute:
+  - condition: cloud_model != 'hybrid'
+    value: ~
+- id: q3
+  title: Product Operating System
+  prompt: What operating system(s) will this product use?
+  type: multiple-choice
+  min: 0
+  choices:
+  - key: win
+    text: Microsoft Windows
+  - key: linux
+    text: Linux or Unix
+  - key: macos
+    text: Apple Macintosh OS X
+  - key: ios
+    text: Apple iOS
+  - key: android
+    text: Android
+  max: ~
+- id: q4
+  title: Windows Versions
+  prompt: What kind of windows operating systems will your product use?
+  type: multiple-choice
+  min: 1
+  impute:
+  - condition: '"win" not in q3'
+    value: ~
+  choices:
+  - key: wks
+    text: Windows Workstation
+    help: 'Versions for desktop and workstations, for example: Windows 10'
+  - key: svr
+    text: Windows Server
+    help: 'Versions for servers, for example: Windows Server 2019'
+  max: ~
+- id: q5
+  title: Operating System Lifespan
+  prompt: Provide an estimate of the anticipated date for the end of life of the product's
+    operating system.
+  type: date
+- id: q2
+  title: Product Technical Design Assessment
+  prompt: This module will guide you through assessing technical risk in the product
+    design.
+  type: interstitial
+- id: ports_protocols_services
+  title: Ports, Protocols, and Services
+  prompt: What are the ports, protocols, and services for the product?
+  type: datagrid
+  min: 0
+  fields:
+  - key: Ports(TCP/UDP)
+    text: Ports(TCP/UDP)
+  - key: Protocols
+    text: Protocols
+  - key: Services
+    text: Services
+  - key: Purpose
+    text: Purpose
+  - key: Used By
+    text: Used By
+  max: ~

@@ -1,0 +1,222 @@
+id: module_3
+title: Module 3
+output:
+- id: artifact_1
+  format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+questions:
+- id: q1
+  title: Introduction to Threat Modeling
+  prompt: >-
+    Hello and welcome to the wonderful world of threat modeling!
+
+
+    I am excited to introduce you to the concept of threat modeling in the context
+    of medical device security. As your dedicated Product Security Support Robot,
+    my goal is to ensure that our medical devices are not only innovative and effective
+    but also safeguarded against potential risks and threats.
+  type: interstitial
+  choices:
+  - key: startrek
+    text: Star Trek
+  - key: starwars
+    text: Star Wars
+  - key: lordoftherings
+    text: Lord of the Rings
+  - key: other
+    text: Other
+- id: q0
+  title: What is Threat Modeling?
+  prompt: >-
+    So, what exactly is threat modeling?
+
+
+    Think of threat modeling as a structured approach to identifying, assessing, and
+    mitigating potential risks and vulnerabilities in our medical devices. It's a
+    bit like a detailed blueprint that helps us design with security in mind. By understanding
+    how our devices may be targeted, we can implement measures to protect them and
+    the data they handle.
+
+
+    To put it in simpler terms, consider it akin to how a car manufacturer thinks
+    about safety. They anticipate potential risks like accidents, and they design
+    the car with features like seat belts, airbags, and crumple zones to protect passengers.
+
+
+    In our case, we'll be analyzing every aspect of our medical devices, from the
+    software code to the physical components, to ensure we've considered all possible
+    threats. This could range from malicious attacks by external actors to unintentional
+    system failures.
+  type: interstitial
+- id: q2
+  title: Threat Modeling Process
+  prompt: >-
+    Here's what the process typically involves:
+
+
+    **Step 1: Identification of Assets and Entry Points:** We'll identify the valuable
+    assets within our device (such as patient data) and the potential entry points
+    for threats (like network interfaces or USB ports).
+
+
+    **Step 2: Threat Enumeration:** We'll brainstorm and list down all possible threats
+    that could affect our device. This could include anything from software vulnerabilities
+    to physical tampering.
+
+
+    **Step 3: Vulnerability Assessment:** For each identified threat, we'll evaluate
+    the existing vulnerabilities and weaknesses in our device that might make it susceptible
+    to that threat.
+
+
+    **Step 4: Risk Prioritization:** We'll categorize and prioritize the identified
+    threats based on their potential impact on our device and the likelihood of them
+    occurring.
+
+
+    **Step 5: Mitigation Strategies:** Finally, we'll devise strategies and countermeasures
+    to mitigate or eliminate these identified risks. This might involve design changes,
+    security features, or additional protocols.
+  type: interstitial
+- id: q3
+  title: Wrapping up...
+  prompt: |-
+    So, wrapping up,
+
+    By incorporating threat modeling into our development process, we're ensuring
+        that security is an integral part of what we create. It's about proactively protecting
+        not only our devices but also the trust and well-being of the patients who rely
+        on them.
+
+
+    I'm here to guide and support you throughout this journey. If you have any questions
+        or need further clarification, please don't hesitate to reach out to the Product
+        Security Team. Together, we will all make sure our medical devices stand strong
+        against any potential threat.
+
+
+    Thank you for your commitment to excellence and security in our products!
+  type: interstitial
+- id: q4
+  title: Understanding the tools
+  prompt: |-
+    What are Threat Modeling Tools?
+
+    Threat Modeling Tools are specialized software applications designed to assist
+        in the process of identifying, assessing, and mitigating potential security risks
+        in a structured and systematic manner. They provide a platform for teams to visualize,
+        analyze, and document the security architecture of a system or application.
+  type: interstitial
+- id: q5
+  title: Why Use Tools?
+  prompt: |-
+    Why Use Threat Modeling Tools?
+
+    **Structured Approach:** These tools offer a systematic way to identify vulnerabilities and threats, ensuring nothing is overlooked.
+
+    **Visual Representation:** They provide a visual representation of potential threats, making it easier to understand and address them.
+
+    **Documentation and Collaboration:** They facilitate documentation of the threat model, enabling better collaboration across teams and ensuring continuity.
+
+    **Risk Prioritization:** Tools often include features for categorizing and prioritizing identified threats based on their potential impact.
+  type: interstitial
+- id: q6
+  title: Microsoft Threat Modeling Tool
+  prompt: |-
+    The Recommended Approach: Microsoft Threat Modeling Tool
+
+    After careful consideration, the Product Security Team strongly recommends the
+        use of the Microsoft Threat Modeling Tool as our preferred method for threat modeling.
+        This tool offers a robust set of features that align seamlessly with our development
+        process and the unique challenges of our industry. Here's why it stands out:
+
+
+    **User-Friendly Interface:** The tool provides an intuitive interface that makes
+        threat modeling accessible for both security experts and non-security personnel.
+
+
+    **Integration with Development Process:** It seamlessly integrates with commonly
+        used development environments, ensuring a smooth workflow for our engineering
+        teams.
+
+    **STRIDE Methodology Support:** The tool is designed to align with the STRIDE
+        methodology, allowing us to categorize and analyze threats effectively.
+
+
+    **Detailed Documentation:** It enables the creation of detailed threat models,
+        ensuring a comprehensive understanding of potential risks.
+
+
+    **Active Community and Support:** Microsoft has a thriving community around this
+        tool, providing resources, tutorials, and forums for assistance.
+
+
+    By adopting the Microsoft Threat Modeling Tool, we're ensuring a standardized
+        and effective approach to threat modeling across our projects.
+  type: interstitial
+- id: q7
+  title: Download MSTMT
+  prompt: |-
+    Link to download MSTMT
+
+    You can download the Microsoft Threat Modeling Tool [here](https://aka.ms/threatmodelingtool)
+  type: interstitial
+- id: q8
+  title: Threat Model Training
+  prompt: |-
+    Threat Model Training:
+
+    I'm thrilled to introduce you to the concept of Threat Modeling, a crucial step
+        towards ensuring the security and integrity of our medical devices. As your dedicated
+        Product Security Robot, it's my priority to equip you with the knowledge and skills
+        needed to safeguard our products against potential risks and threats.
+  type: interstitial
+- id: q9
+  title: STRIDE Methodology
+  prompt: "The STRIDE Methodology\n\nOne of the methodologies we'll be using is called
+    STRIDE, which helps us categorize and analyze different types of threats. Here's
+    a brief overview:\n\n**Spoofing Identity:** Addresses the potential for someone
+    to impersonate a legitimate user or system.\n\n**Tampering with Data:** Focuses
+    on unauthorized alterations or modifications to data.\n\n**Repudiation:** Involves
+    denying an action or event, making it difficult to trace back to its origin.\n\n**Information
+    Disclosure:** Deals with unauthorized access to sensitive information.\n\n**Denial
+    of Service (DoS):** Concerns preventing legitimate users from accessing a service.\n
+    \n**Elevation of Privilege:** Examines unauthorized escalation of user privileges.\n\nBy
+    breaking down potential threats into these categories, we can more effectively
+    plan and implement security measures."
+  type: interstitial
+- id: q10
+  title: External Training Sources
+  prompt: |-
+    Next Steps: External Training Resources
+
+    For those of you eager to dive deeper into threat modeling, I've made a short list of external resources that provide more detailed training:
+
+    Microsoft's Threat Modeling Tool Overview: [link](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool)
+
+    OWASP Threat Modeling Cheat Sheet: [link](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
+
+    Introduction to STRIDE Threat Modeling: [link](https://www.youtube.com/watch?v=ChFXXovP4yE)
+
+    Remember, the goal of this is to empower you with the skills to identify and mitigate potential risks in our medical devices. If you have any questions or need further guidance, please don't hesitate to reach out to the Product Security Team.
+
+    Thank you for your dedication to ensuring the safety and security of our products. Let's work together to build devices that our users can trust.
+  type: interstitial
+- id: q12
+  title: Exporting the Report
+  prompt: "Exporting and Uploading Threat Model Reports\n\n1. Open the Microsoft Threat
+    Modeling Tool and navigate to the project you're working on.. \n2. In the menu,
+    select Reports > Create Full Report\\n3. Ensure all three checkboxes are ticked
+    in the dialog box and click 'Generate Report' \n3. Give the file a name and save
+    the HTML file in a location of your choice for future reference."
+  type: interstitial
+- id: q13
+  title: Upload Threat Model Report
+  prompt: "Exporting and Uploading Threat Model Reports\n\n1. Open the Microsoft Threat
+    Modeling Tool and navigate to the project you're working on.\n\n2. In the menu,
+    select Reports > Create Full Report\n\n3. Ensure all three checkboxes are ticked
+    in the dialog box and click 'Generate Report' \n\n4. Give the file a name and
+    save the HTML file in a location of your choice for future reference.\n\n5. upload
+    the file to this workflow module question."
+  type: file

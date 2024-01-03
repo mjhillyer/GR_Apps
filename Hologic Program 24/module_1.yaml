@@ -1,0 +1,178 @@
+id: module_1
+title: Module 1
+output:
+- id: artifact_1
+  format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+- id: team_charter
+  title: Engineering Team Cybersecurity Champion Charter
+  format: markdown
+  filename: templates/ssp_v1.md
+  template: "# Cybersecurity Champion Charter\r\n\r\nThe Product Cybersecurity Champions
+    will be responsible for creating and maintaining the cybersecurity artifacts necessary
+    for the successful implementation of the Secure Product Development Framework
+    for the Orion Project. They will work closely with other members of the development
+    team to ensure that cybersecurity considerations are integrated into every aspect
+    of product design and development.\r\n\r\nIn addition to their artifact creation
+    and maintenance responsibilities, the Product Cybersecurity Champions will also
+    be responsible for facilitating the execution of the required cybersecurity activities
+    outlined in the Secure Product Development Framework. This includes identifying
+    potential security threats and vulnerabilities, developing, and implementing appropriate
+    countermeasures, and ensuring that all cybersecurity policies and procedures are
+    followed.\r\n\r\nThe Product Cybersecurity Champions will serve as the primary
+    point of contact for all cybersecurity-related issues and concerns within the
+    product development team. They will work closely with other teams, including quality
+    assurance and compliance, to ensure that all security requirements are met and
+    that our products are developed with the highest possible level of security.\r\n\r\n
+    \r\n\r\nThe Product Cybersecurity Champions Are:\r\n\r\n\r\n\r\n| Name | Title
+    | Email |\r\n| ---- | ----- | ----- |\r\n|      |       |       |\r\n|      |
+    \      |       |\r\n|      |       |       |\r\n|      |       |       |\r\n|
+    \     |       |       |"
+questions:
+- id: q1
+  title: Engineering Cybersecurity Foundations
+  prompt: >-
+    Building Secure Foundations:
+
+
+    This module will collect information about the engineering team and individuals
+    who are responsible for performing cybersecurity activities as well as information
+    about the product being developed.
+  type: interstitial
+  choices:
+  - key: startrek
+    text: Star Trek
+  - key: starwars
+    text: Star Wars
+  - key: lordoftherings
+    text: Lord of the Rings
+  - key: other
+    text: Other
+- id: q0
+  title: Business Unit
+  prompt: What is the business unit that is responsible for the development and cybersecurity
+    activities for this product?
+  type: choice
+  choices:
+  - key: BST
+    text: Breast Health
+  - key: BTX
+    text: Biotheranostics
+  - key: CTX
+    text: Cytology Diagnostics
+  - key: HIT
+    text: Hologic IT
+  - key: MDX
+    text: Molecular Diagnostics
+  - key: SKL
+    text: Skeletal Health
+  - key: SUR
+    text: Surgical Solutions
+  - key: SSI
+    text: Ultrasound
+  - key: TST
+    text: Testing & Demo
+- id: q2
+  title: Product Manager
+  prompt: Who is the product manager for this product team?
+  type: datagrid
+  min: 1
+  fields:
+  - key: Name
+    text: Product Manager Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  max: ~
+- id: q5
+  title: R&D Manager
+  prompt: Who is the R&D Engineering manager for this product team?
+  type: datagrid
+  min: 1
+  fields:
+  - key: Name
+    text: Engineering Manager Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  max: ~
+- id: q3
+  title: Cybersecurity Champions
+  prompt: Who are the cybersecurity champions for this product team?
+  type: datagrid
+  min: 1
+  fields:
+  - key: Name
+    text: Champion Name
+  - key: Title
+    text: Business Title
+  - key: Email
+    text: Email Address
+  max: ~
+- id: q4
+  title: Cybersecurity Training Records
+  prompt: Please provide records of cybersecurity training for the appropriate team
+    members.
+  type: datagrid
+  min: 0
+  fields:
+  - key: Employee Name
+    text: Employee Name
+  - key: Business Title
+    text: Business Title
+  - key: Email Address
+    text: Email Address
+  - key: Course Name
+    text: Course Name
+  - key: Training Provider
+    text: Training Provider
+  - key: Date Training Completed
+    text: Date Training Completed
+  - key: Training Duration (in Hours)
+    text: Training Duration (in Hours)
+  max: ~
+- id: q6
+  title: Product Name
+  prompt: |-
+    What is the commercial name of the product?
+
+    We are looking for the official full name here, not a codename or a nickname.
+    You will have an opportunity to input a product version number later, so for now, just enter the full product name.
+  type: text
+  actions:
+  - action: system/update_system_and_project_name/name
+    comment: Update system name and project name
+    value: '*'
+- id: q7
+  title: Alternate Product Names
+  prompt: Please enter any other names this product is known as, to include code names,
+    acronyms, abbreviations, etc.
+  type: longtext
+- id: q8
+  title: Product Description
+  prompt: Please provide a description of the product.
+  type: longtext
+- id: q12
+  title: Intended Use
+  prompt: Describe the Intended use of the product.
+  type: longtext
+- id: q9
+  title: Product Version
+  prompt: What is the product version?
+  type: text
+  default: '1.0'
+- id: q10
+  title: Release to Market
+  prompt: What is the expected date the product will be made available for commercial
+    release?
+  type: date
+- id: q11
+  title: Product Lifespan
+  prompt: "Provide an estimate of the anticipated date for the end of life of the
+    product.\n\nThis includes the expected duration for which the product will be
+    actively supported and  maintained after its initial release. \n\nConsider factors
+    such as market demand,  technological advancements, and regulatory requirements."
+  type: date

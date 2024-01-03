@@ -1,0 +1,69 @@
+id: app
+title: Hologic Secure Product Development Program
+type: project
+version: 0.1
+icon: app.png
+introduction:
+  format: markdown
+  template: |
+    The goal of The Hologic Secure Product Design Program is to provide a
+    Secure by Design methodology to the product engineering activities that span the
+    entire product lifecycle from initial concept to product obsolescence. This allows
+    the product development team to 'shift left' their security activities, allowing
+    the inclusion of security features earlier in the development process. By shifting
+    left, the cost to mitigate any security risk is significantly reduced.
+input: []
+output: []
+catalog:
+  title: Hologic Secure Product Development Program
+  category: Hologic
+  vendor: Hologic
+  vendor_url: http://hologic.com
+  status: stub
+  source_url: https://github.com/mjhillyer/GR_Apps
+  description:
+    short: Secure Product Design Program.
+    long: >
+      Provides a security activities framework to enable a Secure by Design methodology.
+  version: 0.1
+questions:
+- id: module_1
+  title: Secure Engineering Foundations
+  type: module
+  module-id: module_1
+- id: module_2
+  title: Environmental and Design Risk Analysis
+  type: module
+  module-id: module_2
+- id: module_3
+  title: Threat Modeling
+  type: module
+  module-id: module_3
+- id: module_4
+  title: Privacy and Data RIsk Analysis
+  type: module
+  module-id: module_4
+- id: module_5
+  title: Security Requirements and Controls
+  type: module
+  module-id: module_5
+- id: module_6
+  title: Module 6
+  type: module
+  module-id: module_6
+- id: module_7
+  title: Module 7
+  type: module
+  module-id: module_7
+- id: module_8
+  title: Module 8
+  type: module
+  module-id: module_8
+- id: module_9
+  title: Module 9
+  type: module
+  module-id: module_9
+- id: module_10
+  title: Module 10
+  type: module
+  module-id: module_10
